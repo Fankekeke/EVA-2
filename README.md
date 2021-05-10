@@ -1,37 +1,65 @@
 # 基于SpringBoot的旅游景区项目
 
 #### 介绍
-基于SpringBoot的旅游景区项目。 前台包含：用户登录注册，景区信息展示、景区信息查询、景区预订、查看公告、查看酒店信息、酒店预订、查看订单等 后台包括： 管理员登录注册、用户管理、景区数据管理、住宿管理、公告管理、购票记录管理、住宿记录、系统监控等模块。
+基于SpringBoot的旅游景区项目。旅游规划数据共享平台；规划应用层，包括基础资料子系统、现状分析子系统、旅游产品设计子系统和环境建设子系统，是开展旅游规划具体业务的工作平台；决策服务层，通过对基础信息和专题信息的查询检索和分析，为旅游规划资源评价、环境容量及客源分析、旅游设施选址、旅游交通网络规划提供决策辅助，是旅游规划的辅助决策平台。 
 
-#### 软件架构
-软件架构说明
+前台包含：用户登录注册，景区信息展示、景区信息查询、景区预订、查看公告、查看酒店信息、酒店预订、查看订单等
+
+后台包括： 管理员登录注册、用户管理、景区数据管理、住宿管理、公告管理、购票记录管理、住宿记录、系统监控等模块。
+
+#### 后端
+- [Spring Boot 2.1.0](http://spring.io/projects/spring-boot/)
+- [Mybatis-Plus](https://mp.baomidou.com/guide/)
+- [MySQL 5.7](https://dev.mysql.com/downloads/mysql/5.7.html#downloads),[Hikari](https://brettwooldridge.github.io/HikariCP/),[Redis](https://redis.io/)
+- [Shiro](http://shiro.apache.org/),[JWT](https://jwt.io/)
+
+#### 前端
+- [Thymeleaf](https://github.com/thymeleaf/thymeleaf)
+- [Vue 2.5.17](https://cn.vuejs.org/),[Vuex](https://vuex.vuejs.org/zh/),[Vue Router](https://router.vuejs.org/zh/)
+- [Axios](https://github.com/axios/axios)
+- [vue-apexcharts](https://apexcharts.com/vue-chart-demos/line-charts/)
+- [ant-design-vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/)
+- [webpack](https://www.webpackjs.com/),[yarn](https://yarnpkg.com/zh-Hans/)
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 项目截图
 
-#### 使用说明
+[![gN4yi8.png](https://z3.ax1x.com/2021/05/10/gN4yi8.png)](https://imgtu.com/i/gN4yi8)
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+[![gN44Zq.png](https://z3.ax1x.com/2021/05/10/gN44Zq.png)](https://imgtu.com/i/gN44Zq)
+
+[![gN4cRg.png](https://z3.ax1x.com/2021/05/10/gN4cRg.png)](https://imgtu.com/i/gN4cRg)
+
+[![gN4gzQ.png](https://z3.ax1x.com/2021/05/10/gN4gzQ.png)](https://imgtu.com/i/gN4gzQ)
+
+[![gN46JS.png](https://z3.ax1x.com/2021/05/10/gN46JS.png)](https://imgtu.com/i/gN46JS)
+
+[![gN4fLn.png](https://z3.ax1x.com/2021/05/10/gN4fLn.png)](https://imgtu.com/i/gN4fLn)
+
+[![gN4RMj.png](https://z3.ax1x.com/2021/05/10/gN4RMj.png)](https://imgtu.com/i/gN4RMj)
+
+[![gN4Wss.png](https://z3.ax1x.com/2021/05/10/gN4Wss.png)](https://imgtu.com/i/gN4Wss)
+
+[![gN4Oy9.png](https://z3.ax1x.com/2021/05/10/gN4Oy9.png)](https://imgtu.com/i/gN4Oy9)
+
+[![gN4IoV.png](https://z3.ax1x.com/2021/05/10/gN4IoV.png)](https://imgtu.com/i/gN4IoV)
+
+[![gN4HWF.png](https://z3.ax1x.com/2021/05/10/gN4HWF.png)](https://imgtu.com/i/gN4HWF)
+
+[![gN45d0.png](https://z3.ax1x.com/2021/05/10/gN45d0.png)](https://imgtu.com/i/gN45d0)
+
+[![gN4LQJ.png](https://z3.ax1x.com/2021/05/10/gN4LQJ.png)](https://imgtu.com/i/gN4LQJ)
+
+[![gN4TiT.png](https://z3.ax1x.com/2021/05/10/gN4TiT.png)](https://imgtu.com/i/gN4TiT)
+
+[![gN4bz4.png](https://z3.ax1x.com/2021/05/10/gN4bz4.png)](https://imgtu.com/i/gN4bz4)
+
+#### 备注
+
+1.  项目详情->点击进入
+2.  联系我 VX: Storm_Berserker
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+1.  国家一级保护废物
