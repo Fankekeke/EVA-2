@@ -20,6 +20,7 @@
 - [vue-apexcharts](https://apexcharts.com/vue-chart-demos/line-charts/)
 - [ant-design-vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/)
 - [webpack](https://www.webpackjs.com/),[yarn](https://yarnpkg.com/zh-Hans/)
+- [百度地图](https://lbsyun.baidu.com/)
 
 
 
