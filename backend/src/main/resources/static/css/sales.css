@@ -1,0 +1,64 @@
+.bgs{
+	width: 100%;
+    height: 600px;
+    background: url(../images/sales/bg1.png) center top no-repeat;
+    position: relative;
+}
+.bgs>div{
+	position: absolute;
+	top: 18%;
+	left: 18%;
+	color: #fff;
+	font-size: 60px;
+	
+}
+h1{
+	color:#FF9F4D;
+	font-weight: 800;
+	font-size: 60px;
+}
+.mer{
+	padding: 80px;
+}
+.mer-entry{
+	padding: 10px 30px;
+	text-align: center;
+	border: 1px solid#e3e3e3;
+}
+.mer-entry>p{
+	margin-top: 20px;
+	font-size: 20px;
+	display: inline-block;
+    background: linear-gradient(45deg, #FFCB13, #FF9F4D);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 81px;
+}
+.mer-entry>div{
+	margin-top: 15px;
+    line-height: 20px;
+    height: 60px;
+}
+.entry{
+	background-color: #fff;
+	color: #FF9F4D;
+    border: 1px solid #FF9F4D;
+    padding: 6px 24px;
+    border-radius: 7px;
+}
+.entry:hover{
+	color: #fff;
+	background-color: #FF9F4D;
+}
+.chara{
+	text-align: center;
+	padding: 30px;
+}
+.chara>div{
+	padding: 30px;
+	border: 1px solid#e3e3e3;
+}
+.chara>div>img{
+	height: 160px;
+	width: 210px;
+}

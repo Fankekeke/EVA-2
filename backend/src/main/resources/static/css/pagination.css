@@ -1,0 +1,23 @@
+.csdn-pagination  {margin:20px auto; display:table; font-size:12px;}
+.csdn-pagination * {vertical-align:middle;}
+.csdn-pagination .btn {padding:3px 5px; margin:0 -1px; height:22px; min-width:22px; border:1px solid #ccc; background:#fff; line-height:15px;}
+.csdn-pagination .text {color:#999;}
+.csdn-pagination .page-set {margin-right:30px;}
+.csdn-pagination .page-set .btn .caret {margin-left:20px;}
+.csdn-pagination .page-go {margin-left:20px;}
+.csdn-pagination input  {width:30px; height:22px;}
+.csdn-pagination .btn-go	{background-color:#eee;}
+.csdn-pagination .btn:hover	{border-color:#c00; background-color:#fff; color:#333;}
+.csdn-pagination .active,
+.csdn-pagination .active:hover	{border-color:#c00; background-color:#c00; color:#fff; cursor:default;}
+
+.csdn-pagination.hide-text .text,
+.csdn-pagination.hide-set .page-set,
+.csdn-pagination.hide-nav .page-nav,
+.csdn-pagination.hide-go .page-go {display:none;}
+
+.csdn-pagination .page-nav .btn-prev,
+.csdn-pagination .page-nav .btn-next {width:20px; width:20px; display:inline-block; text-indent:-30px; overflow:hidden; background-image:url(../img/bg_icons.png);}
+.csdn-pagination .page-nav .btn-prev {background-position:-182px -196px;}
+.csdn-pagination .page-nav .btn-next {background-position:-199px -196px;}
+

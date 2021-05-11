@@ -1,0 +1,1928 @@
+
+input:-moz-placeholder,textarea:-moz-placeholder {
+    color: #999
+}
+
+input::-moz-placeholder,textarea::-moz-placeholder {
+    color: #999
+}
+
+input:-ms-input-placeholder,textarea:-ms-input-placeholder {
+    color: #999
+}
+
+.order-main .btn-action,.hotel-panel,.form-panel,.special-panel,.invoice-panel,.coupon-panel,.crediCard-panel,.expense-detail,.payment-panel,.info-panel,.cancel-panel,.hotel-panel .extra .item,.room-item,.tips-question .tips-cont,.order-side .state {
+    border-radius: 4px
+}
+
+.clearfix:after,.wrapper:after,.hotel-panel:after,.form-panel:after,.special-panel:after,.invoice-panel:after,.coupon-panel:after,.crediCard-panel:after,.expense-detail:after,.payment-panel:after,.info-panel:after,.cancel-panel:after,.f-row:after {
+    content: '';
+    display: table;
+    clear: both;
+    height: 0;
+    overflow: hidden
+}
+
+html,body {
+    height: 100%
+}
+
+.container {
+    min-height: 80%
+}
+
+.youyu-header {
+    margin-bottom: 20px;
+    height: 104px;
+    position: relative;
+    border-bottom: 1px solid #d6d6d6;
+    background-color: #fff;
+    box-shadow: 0 2px 0 rgba(0,0,0,0.05)
+}
+
+.header-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    height: 45px;
+    padding: 30px 0 29px
+}
+
+.youyu-header .head-logo {
+    float: left;
+    margin-left: 40px;
+    display: inline
+}
+
+.header-wrapper .head-logo a {
+    float: left;
+    width: 170px;
+    height: 60px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 0; */
+    vertical-align: middle
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto
+}
+
+.process {
+    margin: 30px 0 34px;
+    width: 1000px;
+    height: 38px;
+    border: 1px solid #efefef;
+    border-left: 0 none;
+    border-right: 0 none
+}
+
+.process li {
+    float: left;
+    width: 250px;
+    height: 38px;
+    background: #f9f9f9;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    color: #acacac
+}
+
+.process li i {
+    width: 18px;
+    height: 18px;
+    vertical-align: -4px;
+    margin-right: 10px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 -50px; */
+    vertical-align: middle;
+    display: none
+}
+
+.process li.visited i {
+    display: inline-block
+}
+
+.process li.on {
+    background: #ffb200;
+    color: #fff
+}
+
+.youyu-footer {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-top: 1px solid #ebebeb;
+    padding: 50px 0;
+    color: #999;
+    line-height: 28px
+}
+
+.youyu-footer .copyright {
+    float: left
+}
+
+.youyu-footer .foot-info {
+    float: right
+}
+
+.youyu-footer .foot-address {
+    float: left;
+    margin-right: 60px
+}
+
+.youyu-footer .foot-contact {
+    float: left
+}
+
+.youyu-footer a {
+    color: #999
+}
+
+.youyu-footer .foot-logo {
+    display: block!important;
+    margin: 5px 15px 5px 0;
+    width: 128px;
+    height: 20px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -170px 0; */
+    vertical-align: middle
+}
+
+.order-main {
+    float: left;
+    width: 650px
+}
+
+.order-main .btn-action {
+    margin-bottom: 20px;
+    display: block;
+    background-color: #ff9d00;
+    text-align: center;
+    line-height: 58px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Microsoft Yahei"
+}
+
+.order-main .btn-action:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff8a00
+}
+
+.hotel-panel,.form-panel,.special-panel,.invoice-panel,.coupon-panel,.crediCard-panel,.expense-detail,.payment-panel,.info-panel,.cancel-panel {
+    margin-bottom: 20px;
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    background-color: #fefdfd
+}
+
+.hotel-panel {
+    position: relative;
+    height: 264px;
+}
+
+.hotel-panel .img {
+    float: left;
+    display: inline;
+    margin-right: 20px;
+    width: 242px;
+    height: 242px;
+    overflow: hidden
+}
+
+.hotel-panel .info {
+    float: left;
+    width: 360px
+}
+
+.hotel-panel h2 {
+    font-size: 20px;
+    color: #333;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.hotel-panel .subtitle {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #333;
+    line-height: 20px
+}
+
+.hotel-panel .address {
+    color: #999;
+    line-height: 24px;
+    font-size: 14px
+}
+
+.hotel-panel .star {
+    margin-left: 10px;
+    width: 70px;
+    height: 12px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -80px -50px; */
+    vertical-align: middle;
+    vertical-align: inherit
+}
+
+.hotel-panel .star.star1 {
+    width: 14px
+}
+
+.hotel-panel .star.star2 {
+    width: 28px
+}
+
+.hotel-panel .star.star3 {
+    width: 42px
+}
+
+.hotel-panel .star.star4 {
+    width: 56px
+}
+
+.hotel-panel .star.star5 {
+    width: 70px
+}
+
+.hotel-panel .rate {
+    margin-left: 10px;
+    width: 70px;
+    height: 12px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -220px -50px; */
+    vertical-align: middle;
+    vertical-align: inherit
+}
+
+.hotel-panel .rate.rate1 {
+    width: 14px
+}
+
+.hotel-panel .rate.rate2 {
+    width: 28px
+}
+
+.hotel-panel .rate.rate3 {
+    width: 42px
+}
+
+.hotel-panel .rate.rate4 {
+    width: 56px
+}
+
+.hotel-panel .rate.rate5 {
+    width: 70px
+}
+
+.hotel-panel .extra {
+    position: absolute;
+    left: 272px;
+    bottom: 10px;
+    text-align: center
+}
+
+.hotel-panel .extra .item {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+    padding: 5px 0;
+    width: 85px;
+    height: 85px;
+    border: 1px solid #e7e7e7;
+    position: relative
+}
+
+.hotel-panel .extra .item input {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    border: 0 none;
+    padding: 0;
+    visibility: hidden
+}
+
+.hotel-panel .extra .t {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.hotel-panel .extra .m {
+    font-size: 26px;
+    color: #333;
+    font-weight: bold
+}
+
+.hotel-panel .extra .b {
+    line-height: 14px;
+    color: #999
+}
+
+.mod-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    line-height: 24px
+}
+
+.mod-title .thin {
+    margin-left: 10px;
+    font-weight: normal
+}
+
+.mod-title .num {
+    float: right
+}
+
+.mod-title .i-arrow {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 24px;
+    height: 12px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -30px -85px; */
+    vertical-align: middle
+}
+
+.extend .mod-title .i-arrow {
+    background-position: -30px -70px
+}
+
+.mod-title+.f-row {
+    margin-top: 20px
+}
+
+.mod-wrap .mod-title {
+    cursor: pointer;
+    margin-bottom: 0
+}
+
+.mod-wrap .mod-bd {
+    display: none;
+    margin-top: 15px
+}
+
+.mod-wrap.extend .mod-bd {
+    display: block
+}
+
+.form-panel {
+    padding-bottom: 0
+}
+
+.form-block {
+    margin: 0 -10px;
+    padding: 0 25px 15px
+}
+
+.form-block+.form-block {
+    padding-top: 15px
+}
+
+.room-item {
+    background-color: #f9f9f9;
+    margin: 0 -14px;
+    padding: 14px
+}
+
+.room-item .sub {
+    font-size: 14px;
+    color: #333
+}
+
+.room-item+.room-item {
+    margin-top: 20px
+}
+
+.f-row {
+    margin: 15px 0
+}
+
+.ui-select {
+    float: left;
+    display: inline;
+    margin-right: 10px;
+    width: 148px;
+    height: 31px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    position: relative;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer
+}
+
+.ui-select.open {
+    z-index: 10
+}
+
+.ui-select.open .sel-bd {
+    display: block
+}
+
+.ui-select .trigger {
+    line-height: 31px;
+    padding: 0 25px 0 8px
+}
+
+.ui-select i {
+    position: absolute;
+    right: 11px;
+    top: 14px;
+    border-left: 4px dashed transparent;
+    border-top: 4px solid #999;
+    border-right: 4px dashed transparent;
+    font-size: 0;
+    line-height: 0;
+    z-index: 3;
+    transition: transform .2s linear 0s
+}
+
+.ui-select .sel-bd {
+    position: absolute;
+    left: -1px;
+    top: 32px;
+    right: -1px;
+    border: 1px solid #d9d9d9;
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 2px 1px 1px rgba(0,0,0,0.08)
+}
+
+.ui-select .sel-bd a {
+    display: block;
+    color: #999;
+    padding: 0 8px;
+    line-height: 28px
+}
+
+.ui-select .sel-bd a:hover {
+    background-color: #f6f6f6;
+    text-decoration: none;
+    color: #666
+}
+
+.ui-select.ui-select-long {
+    width: 308px
+}
+
+.ui-input {
+    float: left;
+    width: 150px;
+    display: inline;
+    margin-right: 10px;
+    height: 33px;
+    position: relative
+}
+
+.ui-input input {
+    width: 132px;
+    height: 21px;
+    margin: 0;
+    padding: 5px 8px;
+    border: 1px solid #666;
+    border-radius: 2px;
+    background: 0;
+    line-height: 21px;
+    font-size: 12px;
+    color: #333;
+    vertical-align: top;
+    transition: border .5s ease-in-out 0s
+}
+
+.ui-input input:focus {
+    outline: 0
+}
+
+.ui-input label {
+    position: absolute;
+    left: 9px;
+    line-height: 21px;
+    top: 6px;
+    color: #999;
+    pointer-events: none;
+    transition: all .5s ease-in-out 0s
+}
+
+.ui-input .fieldset,.ui-input.ui-input-focus label,.ui-input.ui-input-success label,.ui-input.ui-input-error label {
+    left: 7px;
+    top: -7px;
+    padding: 0 2px;
+    line-height: 14px;
+    background-color: #f9f9f9
+}
+
+.ui-input .icon-success {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 -50px; */
+    vertical-align: middle;
+    top: 6px;
+    right: 6px;
+    opacity: 0;
+    transform: scale(0);
+    filter: alpha(opacity=0);
+    pointer-events: none;
+    transition: transform .2s ease 0s
+}
+
+.ui-input.ui-input-focus input {
+    border-color: #ff9d00
+}
+
+.ui-input.ui-input-focus label {
+    color: #ff9d00
+}
+
+.ui-input.ui-input-success input {
+    border-color: #666
+}
+
+.ui-input.ui-input-success .icon-success {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    transform: scale(1)
+}
+
+.ui-input.ui-input-error input {
+    border-color: #ff584b
+}
+
+.ui-input.ui-input-error label {
+    color: #ff584b
+}
+
+.ui-input.ui-input-long {
+    width: 310px
+}
+
+.ui-input.ui-input-long input {
+    width: 292px
+}
+
+.btn-people {
+    display: inline-block;
+    font-size: 12px;
+    color: #666;
+    line-height: 32px;
+    vertical-align: top
+}
+
+.btn-people:hover {
+    color: #666
+}
+
+.btn-people i {
+    float: left;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -20px -50px; */
+    vertical-align: middle;
+    margin: 6px 5px 0 0
+}
+
+.btn-people i.i-delete {
+    background-position: -40px -50px
+}
+
+.tips {
+    margin: 15px 0 5px;
+    color: #999
+}
+
+.tips+.tips {
+    margin-top: 0
+}
+
+.tips-err {
+    display: inline-block;
+    margin-right: 10px;
+    color: #ff584b;
+    line-height: 32px
+}
+
+.tips-err i {
+    float: left;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -175px -50px; */
+    vertical-align: middle;
+    margin: 6px 5px 0 0
+}
+
+.tips-question {
+    margin-left: 5px;
+    display: inline-block;
+    *display: inline;
+    *zoom:1;width: 18px;
+    height: 18px;
+    vertical-align: 0;
+    position: relative
+}
+
+.tips-question i {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -60px -50px; */
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+    cursor: pointer
+}
+
+.tips-question i.i-notice {
+    background-position: -155px -50px
+}
+
+.tips-question .tips-cont {
+    position: absolute;
+    right: -23px;
+    bottom: -18px;
+    background-color: #000;
+    background-color: rgba(0,0,0,0.8);
+    width: 210px;
+    padding: 20px 18px 48px;
+    font-size: 12px;
+    color: #f9f9f9;
+    line-height: 18px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transition: all .3s linear 0s;
+    visibility: hidden;
+    text-align: left
+}
+
+.tips-question span {
+    color: #ff584b
+}
+
+.tips-question:hover .tips-cont {
+    z-index: 1;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    visibility: visible
+}
+
+.line {
+    margin: 20px 0;
+    height: 1px;
+    background-color: #efefef;
+    overflow: hidden
+}
+
+.form-contact .mod-title {
+    margin-bottom: 20px
+}
+
+.form-contact .f-row {
+    margin-bottom: 5px;
+    margin-top: 15px
+}
+
+.form-contact .frequent {
+    margin-top: -10px;
+    margin-bottom: 20px
+}
+
+.radio {
+    float: left;
+    margin-right: 10px;
+    padding: 0 16px;
+    height: 31px;
+    border: 1px solid #666;
+    text-align: center;
+    line-height: 31px;
+    font-size: 14px;
+    color: #333;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative
+}
+
+.radio:hover {
+    border-color: #ff9d00
+}
+
+.radio.current {
+    border-color: #ff9d00
+}
+
+.radio.current:after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 -70px; */
+    vertical-align: middle;
+    right: -1px;
+    bottom: -1px
+}
+
+.radio.small {
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    overflow: hidden
+}
+
+.radio.small:after {
+    right: -3px;
+    bottom: -2px
+}
+
+.special-panel {
+    padding: 15px 25px
+}
+
+.special-panel .f-row {
+    margin: 10px 0
+}
+
+.special-panel textarea {
+    width: 368px;
+    height: 40px;
+    padding: 8px 10px;
+    line-height: 20px;
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #666
+}
+
+.special-panel textarea:focus {
+    outline: 0;
+    border-color: #ff9d00
+}
+
+.invoice-panel {
+    padding: 15px 25px
+}
+
+.coupon-panel {
+    padding: 15px 25px
+}
+
+.coupon-panel li {
+    float: left;
+    display: inline;
+    margin: 10px 20px 10px 0;
+    width: 250px;
+    height: 66px;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer
+}
+
+.coupon-panel li:hover {
+    border-color: #f5ab1a
+}
+
+.coupon-panel li.current {
+    border-color: #f5ab1a
+}
+
+.coupon-panel li.current:after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 -70px; */
+    vertical-align: middle;
+    right: -1px;
+    bottom: -1px
+}
+
+.coupon-panel li.disabled {
+    cursor: default
+}
+
+.coupon-panel li.disabled .value {
+    background-color: #e7e7e7
+}
+
+.coupon-panel li.disabled strong {
+    color: #999
+}
+
+.coupon-panel li.disabled:hover {
+    border-color: #d9d9d9
+}
+
+.coupon-panel .value {
+    float: left;
+    margin: -1px 0 -1px -1px;
+    width: 98px;
+    height: 68px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 -100px; */
+    vertical-align: middle;
+    background-color: #f5ad1e;
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-right: 1px dashed #fff;
+    display: table;
+    text-align: center;
+    color: #fff;
+    font-size: 12px
+}
+
+.coupon-panel .value .middle {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.coupon-panel .value b {
+    font-size: 24px;
+    font-family: "Microsoft Yahei"
+}
+
+.coupon-panel .info {
+    padding: 15px 10px 0;
+    overflow: hidden;
+    text-align: center;
+    color: #999;
+    line-height: 20px
+}
+
+.coupon-panel .info strong {
+    font-weight: normal;
+    color: #333
+}
+
+.btn-use {
+    margin-right: 10px;
+    display: inline-block;
+    width: 80px;
+    height: 33px;
+    background-color: #ff9d00;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 33px;
+    color: #fff;
+    font-size: 14px
+}
+
+.btn-use:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #ff8a00
+}
+
+.crediCard-panel {
+    padding: 15px 25px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap
+}
+
+.crediCard-panel span {
+    margin-left: 12px;
+    height: 24px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -60px -70px; */
+    vertical-align: middle
+}
+
+.crediCard-panel span.card-master {
+    width: 30px;
+    background-position: -60px -70px
+}
+
+.crediCard-panel span.card-dinersclub {
+    width: 25px;
+    background-position: -100px -70px
+}
+
+.crediCard-panel span.card-jcb {
+    width: 25px;
+    background-position: -140px -70px
+}
+
+.crediCard-panel span.card-unionpay {
+    width: 35px;
+    background-position: -180px -70px
+}
+
+.crediCard-panel span.card-visa {
+    width: 36px;
+    background-position: -220px -70px
+}
+
+.crediCard-panel span.card-ae {
+    width: 28px;
+    background-position: -260px -70px
+}
+
+.expense-detail {
+    padding: 0
+}
+
+.expense-detail .hd {
+    line-height: 35px;
+    background-color: #f9f9f9;
+    padding: 0 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold
+}
+
+.expense-detail .bd {
+    padding: 0 15px
+}
+
+.expense-detail li {
+    padding-top: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px
+}
+
+.expense-detail .price {
+    float: right;
+    font-family: "Microsoft Yahei";
+    font-size: 14px
+}
+
+.expense-detail .price.price-minus {
+    color: #ff584b
+}
+
+.expense-detail .total {
+    padding: 15px 0 20px;
+    border-bottom: 0;
+    font-size: 18px;
+    color: #333
+}
+
+.expense-detail .total .price {
+    color: #ff8d00;
+    font-weight: bold;
+    font-size: 18px
+}
+
+.order-side {
+    width: 330px
+}
+
+.order-side.fixed {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    z-index: 30;
+    margin-left: 170px
+}
+
+.order-side .state {
+    margin-bottom: 10px;
+    color: #388302;
+    background-color: #ddfdc5;
+    padding: 10px 15px;
+    line-height: 20px;
+    font-size: 12px
+}
+
+.order-side .state.danger {
+    color: #ff584b;
+    border-color: #ffbfb9;
+    background-color: #ffd6d2
+}
+
+.order-side .tips {
+    text-align: right;
+    color: #666
+}
+
+.asterisk {
+    color: #ff584b
+}
+
+.payment-panel {
+    padding: 15px 25px
+}
+
+.payment-panel .security {
+    font-size: 14px;
+    margin-top: -5px;
+    color: #333
+}
+
+.payment-panel .security span {
+    color: #2eb149
+}
+
+.payment-panel .security i {
+    margin-right: 5px;
+    width: 12px;
+    height: 15px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -195px -50px; */
+    vertical-align: middle;
+    vertical-align: -3px
+}
+
+.payment-panel .radio {
+    display: inline-block;
+    margin-right: 16px;
+    width: 124px;
+    height: 20px;
+    padding: 13px 0;
+    border: 1px solid #666;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    cursor: pointer;
+    position: relative
+}
+
+.payment-panel .radio.current {
+    border-color: #ff9d00
+}
+
+.payment-panel .radio.current:after {
+    content: '';
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat 0 -70px; */
+    vertical-align: middle;
+    right: -1px;
+    bottom: -1px
+}
+
+.payment-panel .radio i {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    /* background: url(/images/youyu/order/sprites-v2.5.png) no-repeat -170px -25px; */
+    vertical-align: middle
+}
+
+.payment-panel .radio i.logo-wxpay {
+    background-position: -195px -25px
+}
+
+.payment-panel .radio i.logo-card {
+    background-position: -220px -25px
+}
+
+.payment-panel .f-row>.tips-question {
+    margin-top: 7px
+}
+
+.payment-panel .f-row>.tips-question img {
+    margin: 15px 0 10px
+}
+
+.payment-panel .f-row>.tips-question .tips-cont {
+    text-align: center
+}
+
+.info-panel {
+    padding: 15px 25px
+}
+
+.info-panel dl {
+    line-height: 20px;
+    color: #333
+}
+
+.info-panel dl+dl {
+    border-top: 1px solid #efefef;
+    margin-top: 10px;
+    padding-top: 10px
+}
+
+.info-panel dl dt {
+    margin-bottom: 10px;
+    font-size: 14px
+}
+
+.info-panel dl dd {
+    margin: 7px 0
+}
+
+.info-panel .label {
+    float: left;
+    width: 175px;
+    color: #999
+}
+
+.cancel-panel {
+    padding: 15px 25px;
+    font-size: 14px;
+    color: #333;
+    line-height: 24px
+}
+
+.cancel-panel .f-row {
+    margin-bottom: 10px
+}
+
+.cancel-panel label {
+    display: block;
+    cursor: pointer
+}
+
+.cancel-panel .icon-checkbox {
+    display: inline-block;
+    float: left;
+    margin-top: 3px;
+    margin-right: 8px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    position: relative
+}
+
+.cancel-panel .icon-checkbox.checked:after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 5px;
+    border-bottom: 2px solid #333;
+    border-left: 2px solid #333;
+    transform: rotate(-45deg);
+    left: 3px;
+    top: 2px
+}
+
+.cancel-panel a {
+    color: #f95555;
+    text-decoration: underline
+}
+
+.cancel-panel a:hover {
+    text-decoration: none
+}
+
+.popup-layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 500
+}
+
+.popup-layer.hide-popup {
+    display: none
+}
+
+.popup-container {
+    width: 650px;
+    min-height: 300px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #d9d9d9
+}
+
+.popup-container.popup-bank-container {
+    width: 560px;
+    margin: -213px 0 0 -281px
+}
+
+.popup-container .pop-hd {
+    padding: 0 25px;
+    font-size: 14px;
+    color: #333;
+    line-height: 50px;
+    background-color: #f3f3f3;
+    font-weight: bold
+}
+
+.popup-container .pop-bd {
+    max-height: 430px;
+    margin: 25px;
+    line-height: 24px;
+    color: #333;
+    overflow: auto
+}
+
+.popup-container .pop-bd a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #333
+}
+
+.popup-container .pop-bd.pop-bank {
+    margin-bottom: 0;
+    margin-top: 15px
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav {
+    width: 170px;
+    height: 290px;
+    float: left;
+    font-size: 0;
+    margin-left: 8px
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav .litter-item {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 1px solid #000;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 10px 10px 0;
+    font-weight: normal;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav .litter-item.hot-bank {
+    width: 72px
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav .litter-item:hover {
+    background-color: #ff9d03;
+    color: #fff;
+    border: 1px solid #ff9d03
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav .litter-item.active {
+    background-color: #ff9d03;
+    color: #fff;
+    border: 1px solid #ff9d03
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav .litter-item.disabled {
+    color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    cursor: Default
+}
+
+.popup-container .pop-bd.pop-bank .bank-nav .litter-item.disabled:hover {
+    background: 0;
+    color: #d9d9d9;
+    border: 1px solid #d9d9d9
+}
+
+.popup-container .pop-bd.pop-bank .bank-box {
+    width: 280px;
+    height: 290px;
+    padding-right: 30px;
+    margin-left: 15px;
+    float: right;
+    overflow: auto
+}
+
+.popup-container .pop-bd.pop-bank .bank-box ul {
+    width: 100%
+}
+
+.popup-container .pop-bd.pop-bank .bank-box ul li {
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 16px;
+    color: #474747;
+    line-height: 40px
+}
+
+.popup-container .pop-bd.pop-bank .bank-box ul li.bank-group {
+    font-weight: bold
+}
+
+.popup-container .pop-bd.pop-bank .bank-box ul .bank-item {
+    display: inline-block;
+    font-size: 14px;
+    color: #474747;
+    text-decoration: none;
+    width: 100%;
+    line-height: 40px;
+    font-weight: normal
+}
+
+.popup-container .pop-bd.pop-bank .bank-box ul .bank-item:hover {
+    background-color: #f7f7f7
+}
+
+.popup-container .pop-desc-wrap {
+    padding: 0 25px;
+    max-height: 400px;
+    overflow: scroll
+}
+
+.popup-container .pop-desc {
+    margin-top: 24px
+}
+
+.popup-container .pop-desc dt {
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: bold;
+    color: rgba(51,51,51,1)
+}
+
+.popup-container .pop-desc dd {
+    color: rgba(102,102,102,1);
+    line-height: 22px
+}
+
+.popup-container .pop-ft {
+    margin: 0 25px;
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    text-align: center
+}
+
+.popup-container .pop-ft .close {
+    display: inline-block;
+    padding: 0 25px;
+    line-height: 28px;
+    color: #fff;
+    background-color: #f5ad1e;
+    border-radius: 2px;
+    font-size: 14px
+}
+
+.popup-container .pop-ft .close:hover {
+    text-decoration: none;
+    background-color: #efa20b
+}
+
+.popup-container .pop-ft.no-border {
+    border-top: 0
+}
+
+.text-warn {
+    color: #ff584b
+}
+
+@media(min-resolution: 1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
+    .header-wrapper .head-logo a,.process li i,.hotel-panel .star,.ui-input .icon-success,.btn-people i,.form-special .radio.current:after,.mod-title .i-arrow,.coupon-panel li.current:after,.crediCard-panel span,.youyu-footer .foot-logo,.tips-question i,.tips-err i,.special-panel .radio.current:after,.payment-panel .security i,.payment-panel .radio i,.hotel-panel .rate {
+        background-image:url(/images/youyu/order/sprites-v2.5@2x.png);
+        background-size: 300px auto
+    }
+}
+
+.icon-bank {
+    display: inline-block;
+    margin: auto;
+    vertical-align: middle;
+    margin-right: 20px;
+    background-size: 150px 118px;
+    background-repeat: no-repeat;
+    background-image: url(/images/youyu/order/bank-logo.png)
+}
+
+.icon-bj {
+    background-position: -32px 0;
+    width: 22px;
+    height: 22px
+}
+
+.icon-gd {
+    background-position: -64px -64px;
+    width: 22px;
+    height: 22px
+}
+
+.icon-gf {
+    background-position: -94px -96px;
+    width: 22px;
+    height: 19px
+}
+
+.icon-gs {
+    background-position: -32px -32px;
+    width: 22px;
+    height: 22px
+}
+
+.icon-hq {
+    background-position: -128px 0;
+    width: 22px;
+    height: 14px
+}
+
+.icon-hx {
+    background-position: -96px -32px;
+    width: 22px;
+    height: 21px
+}
+
+.icon-js {
+    background-position: 0 -96px;
+    width: 20px;
+    height: 22px
+}
+
+.icon-jt {
+    background-position: -32px -64px;
+    width: 22px;
+    height: 22px
+}
+
+.icon-ms {
+    background-position: -30px -96px;
+    width: 22px;
+    height: 19px
+}
+
+.icon-ny {
+    background-position: 0 0;
+    width: 22px;
+    height: 22px
+}
+
+.icon-pa {
+    background-position: -96px -63px;
+    width: 22px;
+    height: 20px
+}
+
+.icon-pf {
+    background-position: -62px -96px;
+    width: 22px;
+    height: 19px
+}
+
+.icon-sh {
+    background-position: 0 -64px;
+    width: 22px;
+    height: 22px
+}
+
+.icon-xy {
+    background-position: -128px -24px;
+    width: 21px;
+    height: 14px
+}
+
+.icon-yz {
+    background-position: -64px -32px;
+    width: 22px;
+    height: 22px
+}
+
+.icon-zg {
+    background-position: -64px 0;
+    width: 22px;
+    height: 22px
+}
+
+.icon-zs {
+    background-position: 0 -32px;
+    width: 22px;
+    height: 22px
+}
+
+.icon-zx {
+    background-position: -96px 0;
+    width: 22px;
+    height: 22px
+}
+.youyu-foot{
+    margin-top: 20px;
+    height: 104px;
+    position: relative;
+    border-top: 1px solid #d6d6d6;
+    background-color: #fff;
+    box-shadow: 0 -2px 0 rgba(0,0,0,0.05);
+}
+
+@media(min-resolution: 1.25dppx),(-webkit-min-device-pixel-ratio:1.25),(min-device-pixel-ratio:1.25) {
+    .icon-bank {
+        background-size:130px;
+        background-image: url(/images/youyu/order/bank-logox2.png)
+    }
+
+    .icon-bj {
+        background-position: 0 -27px
+    }
+
+    .icon-gd {
+        background-position: -27px -27px
+    }
+
+    .icon-gf {
+        background-position: -81px -81px
+    }
+
+    .icon-gs {
+        background-position: -54px -27px
+    }
+
+    .icon-hq {
+        background-position: -108px 0
+    }
+
+    .icon-hx {
+        background-position: -81px -54px
+    }
+
+    .icon-js {
+        background-position: -81px -27px
+    }
+
+    .icon-jt {
+        background-position: 0 0
+    }
+
+    .icon-ms {
+        background-position: -27px -81px
+    }
+
+    .icon-ny {
+        background-position: -27px -55px
+    }
+
+    .icon-pa {
+        background-position: 0 -81px
+    }
+
+    .icon-pf {
+        background-position: -54px -81px
+    }
+
+    .icon-sh {
+        background-position: 0 -54px
+    }
+
+    .icon-xy {
+        background-position: -108px -19px
+    }
+
+    .icon-yz {
+        background-position: -54px 0
+    }
+
+    .icon-zg {
+        background-position: -81px 0
+    }
+
+    .icon-zs {
+        background-position: -27px 0
+    }
+
+    .icon-zx {
+        background-position: -54px -53px
+    }
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.hotel-panel .img {
+    webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.hotel-panel .img img {
+    width: 100%
+}
+
+.ui-input label {
+    -webket-transition: all .3s ease-in-out 0s;
+    -moz-transition: all .3s ease-in-out 0s;
+    transition: all .3s ease-in-out 0s
+}
+
+.room-index,.room-name,.tips-err-text {
+    font-style: normal
+}
+
+.mod-wrap {
+    overflow: hidden;
+    -webkit-transition: height ease-in .3s;
+    -moz-transition: height ease-in .3s;
+    transition: height ease-in .3s
+}
+
+.mod-wrap .mod-bd {
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity ease-in .3s;
+    -moz-transition: opacity ease-in .3s;
+    transition: opacity ease-in .3s
+}
+
+.mod-wrap.extend .mod-bd {
+    opacity: 1
+}
+
+.dialog-mask {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0,0,0,.6)
+}
+
+.dialog-mask-show {
+    display: block;
+    z-index: 99
+}
+
+.dialog-container {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(0,0,0,.6);
+    padding: 30px;
+    width: 350px;
+    background-color: #fff;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px
+}
+
+.dialog-container-show {
+    display: block;
+    z-index: 100
+}
+
+.dialog-content {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #000
+}
+
+.dialog-content p {
+    text-align: left;
+    line-height: 24px
+}
+
+.dialog-back-btn {
+    margin: 15px auto 0;
+    width: 88%;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff9d00;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px
+}
+
+.loading-text {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.k-spinner {
+    display: inline-block;
+    position: relative;
+    left: 10px;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: k-loadingI 2s linear infinite;
+    -moz-animation: k-loadingI 2s linear infinite;
+    animation: k-loadingI 2s linear infinite
+}
+
+.k-bubble-1,.k-bubble-2 {
+    position: absolute;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-animation: k-loadingIb 2s ease-in-out infinite;
+    -moz-animation: k-loadingIb 2s ease-in-out infinite;
+    animation: k-loadingIb 2s ease-in-out infinite
+}
+
+.k-bubble-2 {
+    top: auto;
+    bottom: 5px;
+    -webkit-animation-delay: -1.0s;
+    -moz-animation-delay: -1.0s;
+    animation-delay: -1.0s
+}
+
+@-webkit-keyframes k-loadingI {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes k-loadingI {
+    0% {
+        -moz-transform: rotate(0deg)
+    }
+
+    100% {
+        -moz-transform: rotate(360deg)
+    }
+}
+
+@keyframes k-loadingI {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes k-loadingIb {
+    0%,100% {
+        -webkit-transform: scale(0)
+    }
+
+    50% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@-moz-keyframes k-loadingIb {
+    0%,100% {
+        -moz-transform: scale(0)
+    }
+
+    50% {
+        -moz-transform: scale(1)
+    }
+}
+
+@keyframes k-loadingIb {
+    0%,100% {
+        transform: scale(0)
+    }
+
+    50% {
+        transform: scale(1)
+    }
+}
+
+.k-loading-con {
+    float: left;
+    margin-right: 20px;
+    margin-top: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #ccc
+}
+
+.k-loading {
+    margin-top: -5px;
+    margin-left: -5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #ffdb26;
+    transform-origin: 50% 50%;
+    animation: k-loading 1s linear infinite
+}
+
+@keyframes k-loading {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.ui-select.open .sel-bd {
+    opacity: 1;
+    -webket-transform: translateY(0);
+    -moz-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.ui-select li {
+    display: block;
+    color: #999;
+    padding: 0 10px;
+    line-height: 28px;
+    font-size: 12px;
+    letter-spacing: 1px
+}
+
+.ui-select li:hover {
+    background-color: rgba(39,38,37,.16)
+}
+
+.order-side .attention {
+    color: #333;
+    background-color: #f9f9f9
+}
+
+.dialog-mask {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: rgba(0,0,0,.6)
+}
+
+.dialog-mask-show {
+    display: block;
+    z-index: 99
+}
+
+.dialog-container {
+    position: fixed;
+    z-index: -1;
+    top: 50%!important;
+    left: 50%!important;
+    border: 1px solid rgba(0,0,0,.6);
+    padding: 30px;
+    width: 350px;
+    background-color: #fff;
+    display: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%)
+}
+
+.dialog-container-show {
+    display: block;
+    z-index: 100
+}
+
+.dialog-content {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #000
+}
+
+.dialog-content p {
+    text-align: left;
+    line-height: 24px
+}
+
+.dialog-confirm-btn {
+    margin: 15px auto 0;
+    width: 88%;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff9d00;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px
+}
+
+.dialog-tips {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #e50202;
+    padding-left: 54px
+}

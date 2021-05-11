@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>自助联盟 - - 小至旅游</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/nav.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/sales.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}"/>
+    <link rel="icon" type="images/x-icon" th:href="@{favicon.ico}"/>
+</head>
+<body style="min-width:1200px;">
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{:url('index/index/index')}"><img th:src="@{/images/xz_logo2.png}"
+                                                                            class="logo"/></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navcen">
+                <li class=""><a href="/web/index.html">首页</a></li>
+                <li class=""><a href="/web/travelLists.html?pageNo=1">旅游游记</a></li>
+                <li class=""><a href="/web/goods.html/北京">自由行</a></li>
+                <li class=""><a href="/web/hotelView.html?pageNo=1" style="position: relative;">订酒店</a>
+                <li class="busentry"><a href="/web/salesshow.html">商家入驻</a></li>
+                <li th:if="${session.user}!=null">
+                    <a href="/web/getOrder.html">我的订单</a>
+                </li>
+                <li class="busplatform" style="display: none; cursor: pointer;"><a
+                        href="{:url('store/Platform/platformshow')}">商家平台</a></li>
+                <li class="Dividingline1"><span></span></li>
+            </ul>
+            <!--游客显示-->
+<!--            <ul class="nav navbar-nav navbar-right loginout">-->
+<!--                <li class="qqlogin"><a><img class="img" th:src="@{/images/qq1.png}"/><img class="img1"-->
+<!--                                                                                          th:src="@{/images/qq2.png}"/></a>-->
+<!--                </li>-->
+
+<!--                <li><a href="{:url('index/Login/loginshow')}">登录</a></li>-->
+<!--                <li class="Dividingline"><span></span></li>-->
+<!--                <li><a href="{:url('index/Login/reginshow')}">注册</a></li>-->
+<!--            </ul>-->
+            <!--登录后显示-->
+            <ul class="nav navbar-nav loginse  navbar-right">
+                <li>
+                    <a>
+                        <button class="btn btn-primary daka">打卡</button>
+                        <!--打卡成功-->
+                        <button style="display: none;" class="btn btn-primary daka">已打卡</button>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="glyphicon glyphicon-bell"></span>消息<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">私信</a>
+                        </li>
+                        <li>
+                            <a href="#">系统通知</a>
+                        </li>
+                        <li>
+                            <a href="#">回复消息</a>
+                        </li>
+                        <li>
+                            <a href="{:url('center/index/center')}">喜欢与收藏</a>
+                        </li>
+                        <li>
+                            <a href="#">好友动态</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown user">
+                    <a title="头像" href="{:url('center/index/center')}" class="dropdown-toggle" data-toggle="dropdown"
+                       role="button" aria-haspopup="true" aria-expanded="false">
+                        <img class="logimg" src=""/><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="user-m"><span
+                                style="color: #fff;"><a>蜂蜜&nbsp; 0</a>&nbsp;/&nbsp;<a>金币 &nbsp;0</a></span></li>
+                        <li>
+                            <a href="{:url('center/index/center')}"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;我的小至</a>
+                        </li>
+                        <li>
+                            <a href="{:url('travelnotes/travelnotes/writing_notes')}"><span
+                                    class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;写游记</a>
+                        </li>
+                        <li>
+                            <a href="{:url('center/index/center')}"><span class="glyphicon glyphicon-flag"></span>&nbsp;&nbsp;我的足迹</a>
+                        </li>
+                        <li>
+                            <a href="{:url('center/index/center')}"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;我的好友</a>
+                        </li>
+                        <li>
+                            <a href="{:url('center/index/center')}"><span class="glyphicon glyphicon-heart"></span>&nbsp;&nbsp;我的收藏</a>
+                        </li>
+                        <li>
+                            <a href="{:url('center/index/center')}"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;我的订单</a>
+                        </li>
+                        <li class="goout" style="cursor: pointer">
+                            <a><span class="glyphicon glyphicon-log-out "></span>&nbsp;&nbsp;退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<div class="bgs probootstrap-animate">
+    <div class="probootstrap-animate">
+        <h1>欢迎加入</h1>
+        <p>小至全球旅行商行</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mer probootstrap-animate">
+            <div class="mer-entry">
+                <p>旅游业务</p>
+                <div>
+                    旅游度假、目的地玩乐商家入驻（当地游、门票、自由行、跟团游、签证、邮轮、定制等）
+                </div>
+
+            </div>
+        </div>
+        <div class="col-lg-6 mer probootstrap-animate">
+            <div class="mer-entry">
+                <p>住宿业务</p>
+                <div>
+                    酒店入驻（国内酒店、国际酒店、民宿短租等）
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row probootstrap-animate">
+        <div class="col-lg-4 chara">
+            <div>
+                <img th:src="@{/images/sales/logo1.png}"/>
+                <h2>高效经营工具</h2>
+                <p>基础运营工具、客服工具、数据中心、小至大学、开放平台等帮助合作伙伴精准定位客群，提高运营效率。</p>
+            </div>
+        </div>
+        <div class="col-lg-4 chara">
+            <div>
+                <img th:src="@{/images/sales/logo2.png}"/>
+                <h2>全方位店铺运营</h2>
+                <p>小至特色内容导购、店铺装修以及粉丝关注，多种店铺运营方式，定位精准流量，打造店铺品牌。</p>
+            </div>
+        </div>
+        <div class="col-lg-4 chara">
+            <div>
+                <img th:src="@{/images/sales/logo3.png}"/>
+                <h2>平台营销中心</h2>
+                <p>丰富的营销工具，参与平台多种促销活动，深挖目的地特色资源打造最具影响力全站活动。</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--引入底部公共页面-->
+<div th:replace="public_page :: myfooter"></div>
+
+<script th:src="@{/js/jquery-3.1.1.min.js}" type="text/javascript"></script>
+<script th:src="@{/js/layer/layer.js}"></script>
+<script th:src="@{/js/axios.js}"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A73cbd90c90dc8f155d0a5ccd00e130c"></script>
+<script>
+    var Limg = '';
+    var Loginok = '{:url("login")}';//登录判断
+    var Bustest = '{:url("bustest")}';//入驻判断
+    var Alliance = '{:url("store/Alliance/allianceshow")}';//跳转入驻申请
+    var Alindex = "error.html";//跳转首页
+    var Logingetout = '{:url("loginput")}';//退出
+    var indexout = "{:url('index/Login/loginshow')}";//跳转登录
+</script>
+<!--		<script th:src="@{/js/sales.js}"></script>-->
+
+<script th:src="@{/js/jquery.waypoints.min.js}"></script>
+<!--	<script>-->
+<!--		$('.qqlogin').click(function () {-->
+<!--			var childWindow = window.open('{:url("login/qqlogin")}',"TencentLogin");-->
+<!--		})-->
+<!--	</script>-->
+</body>
+</html>

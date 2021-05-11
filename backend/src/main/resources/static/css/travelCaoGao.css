@@ -1,0 +1,83 @@
+.wihth{
+	margin-left: -42px;
+}
+.row{
+	margin-top: 10px;
+}
+.CaoGao_content{
+	width: 1000px;
+	height: 600px;
+	border: 1px solid #DEDEDE;
+	margin: 0 auto;
+   	filter:progid:DXImageTransform.Microsoft.Shadow(color=#DEDEDE,direction=120,strength=4);
+   	-moz-box-shadow: 2px 2px 10px #DEDEDE;
+   	-webkit-box-shadow: 2px 2px 10px #DEDEDE;
+   	box-shadow:2px 2px 10px #DEDEDE;
+   	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: auto;
+}
+.row1_span{
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+.row1_span span{
+	font-size: 20px;
+	font-weight: 700;
+}
+.row1_span .span{
+	font-size: 12px;
+	color: red;
+}
+.row1_img{
+	margin-top: 20px;
+	width: 32px;
+	height: 40px;
+	background: url("../../../public/static/images/drafts-icon.p_07.jpg");
+	float: right;
+	margin-right: 10px;
+}
+.row1_img:hover{
+	margin-top: 20px;
+	width: 32px;
+	height: 40px;
+	background: url("../../../public/static/images/drafts-icon.p_09.jpg");
+	float: right;
+	margin-right: 10px;
+}
+.row2_img{
+	width: 180px;
+	height: 135px;
+}
+.row2_right a{
+	font-size:18px;
+	color: #000000;
+}
+.row2_right span{
+	font-size: 12px;
+	color: #CCCCCC;
+}
+.row2_right .a{
+	margin-top: 63px;
+	width: 100px;
+	height: 27px;
+	line-height: 27px;
+	text-align: center;
+	border: 1px solid #C0C0C0;
+	border-radius: 10px;
+	display: inline-block;
+}
+.row2_right .a a{
+	width: 20px;
+	height: 20px;
+	font-size: 14px;
+	color: #000000;
+}
+.row2_right .a:hover{
+	background-color: #FF9D00;
+}
+.laji{
+	margin-left: 40px;
+	cursor: pointer;
+}

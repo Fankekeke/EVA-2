@@ -1,0 +1,141 @@
+body{
+	min-width:1200px;
+}
+footer{
+	clear: both;
+    background-color: #3c3c3c;
+    color: #c2c2c2;
+    padding-bottom: 25px;
+    font-size: 12px;
+    max-width: 100%;
+}
+footer .phone{
+	display: none;
+}
+footer .phone ul{
+	display: table;
+    width: 100%;
+    padding: 20px 0;
+}
+footer .phone ul li{
+	display: table-cell;
+    vertical-align: top;
+    text-align: center;
+}
+footer .phone p{
+	text-align: center;
+	line-height: 0.35rem;
+}
+.f-tuichu{
+	display: none;
+}
+@media (max-width: 992px) {
+	footer .phone{
+		display: block;
+	}
+	footer .comput{
+		display: none!important;
+	}
+}
+footer .container1{
+	width: 1200px;
+	margin: 0 auto;
+    padding: 40px 18px 0px 18px;
+}
+footer a{
+    text-decoration: none;
+    color: #c2c2c2;
+    cursor: pointer;
+}
+footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+ul, ol, li, dl, dd, dt {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+footer strong {
+    color: #ff9d00;
+    font-weight: normal;
+}
+.ft-info{
+	float: left;
+	display: inline;
+}
+.f-left{
+	width: 200px;
+    margin-right: 85px;
+}
+.f-center{
+	width: 135px;
+    margin-right: 85px;
+}
+.f-right{
+	width: 145px;
+    margin-right: 80px;
+}
+.f-img{
+	margin-right: 50px;
+	float: right;
+    /*padding-top: 22px;*/
+    line-height: 1.4em;
+}
+.f-img dd{
+	width: 100px;
+    display: inline;
+    margin-left: 30px;
+    float: right;
+    text-align: center;
+}
+.f-left>dt,
+.f-center>dt,
+.f-right>dt{
+	height: 30px;
+    font-size: 14px;
+}
+footer dd,
+footer a{
+	line-height: 22px;
+}
+footer .clearfix{
+	margin-right: -35px;
+}
+footer .clearfix li{
+	float: left;
+    width: 85px;
+}
+.ft-info-b{
+	clear: both;
+    text-align: center;
+    padding-top: 25px;
+}
+.ft-info-b>dt{
+	height: 30px;
+    font-size: 16px;
+    overflow: hidden;
+}
+.ft-info-b img{
+	margin: 0 6px;
+}
+.ft-links{
+	margin-top: 50px;
+    border-top: 1px solid #575a5b;
+    border-bottom: 1px solid #575a5b;
+    padding: 17px 0 17px 8px;
+}
+.ft-links a{
+	margin-right: 12px;
+}
+.ft-copy{
+	padding: 12px 0 12px 7px;
+    margin-top: -1px;
+}
+.ft-copy p{
+	margin: 0;
+}
+.f-imgae a{
+	margin-right: 10px;
+	display: inline-block;
+}

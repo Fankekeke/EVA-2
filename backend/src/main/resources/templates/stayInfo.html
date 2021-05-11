@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,shrink-to-fit=no">
+    <title>酒店预订,网上预订酒店,国内外酒店价格查询预订平台 - 小至</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" th:href="@{favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/nav.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/nav.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/hotelView.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/zbutt.css}"/>
+
+
+</head>
+<body>
+<!--导航栏-->
+
+<div id="app">
+
+    <!--<vue-nav :idx='5'></vue-nav>-->
+
+    <!--头部-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false" class="navbar-toggle collapsed"><span class="icon-bar"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <a href="index" class="navbar-brand"><img src="/images/header-sprites3.png" th:src="@{/images/xz_logo2.png}" class="logo"></a></div>
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navcen">
+                    <li class=""><a href="/web/index.html">首页</a></li>
+                    <li class=""><a href="/web/travelLists.html?pageNo=1" >旅游游记</a></li>
+                    <li class=""><a href="/web/goods.html/北京" >自由行</a></li>
+                    <li class=""><a href="/web/hotelView.html?pageNo=1" style="position: relative;">订酒店</a>
+                    <li class="busentry" ><a href="/web/salesshow.html" >商家入驻</a></li>
+                    <li th:if="${session.user}!=null">
+                        <a href="/web/getOrder.html">我的订单</a>
+                    </li>
+                    <li class="busplatform" style="display: none; cursor: pointer;"><a
+                            href="{:url('store/Platform/platformshow')}">商家平台</a></li>
+                    <li class="Dividingline1"><span></span></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 style="margin-top: 50px"><i th:text="${stayInfo.stayName}"></i></h2>
+        <div id="scenic-img" style="width: 50%;float: left">
+
+            <div style="width: 100%;margin-top: 100px;">
+                <p style="text-align: left;font-size: 20px">￥ <span th:text="${stayInfo.stayPrice}"></span></p>
+                <p style="text-align: left;font-size: 20px" th:text="${stayInfo.stayAddress}"></p>
+                <img th:src="${stayInfo.webImg}" style="background-size: cover;width: 100%;height: 200px;margin-top: 20px" alt="First slide">
+            </div>
+            <div id="stayMap" style="width: 100%;height: 400px;margin-bottom: 20px">
+
+            </div>
+        </div>
+
+        <div style="width: 50%;margin-top: 300px;float: right">
+            <h3 style="margin-left: 100px;"><i>选择预定房间数</i></h3>
+            <input type="number" style="margin-left: 100px;margin-top: 20px;width: 200px" id="stayNum" min="1" max="5" value="1">
+
+            <h3 style="margin-left: 100px; margin-top: 30px"><i>选择预定天数</i></h3>
+            <input type="number" style="margin-left: 100px;margin-top: 20px;width: 200px" id="stayDay" min="1" max="5" value="7">
+
+            <div style="margin: 100px;">
+                <button class="add-to-cart" id="orderAdd">
+                    <div class="default">预 定</div>
+                    <div class="success">完 成</div>
+                    <div class="cart">
+                        <div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="dots"></div>
+                </button>
+                <p style="margin-top: 30px"><i id="scneic-tip"></i></p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--引入底部公共页面-->
+    <div th:replace="public_page :: myfooter"></div>
+</div>
+
+<script th:src="@{/js/jquery-2.1.0.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{/js/bootstrap.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{/js/vue.js}" type="text/javascript" charset="utf-8"></script>
+
+<script th:src="@{/js/axios.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{/js/layer/layer.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{/js/laydate/laydate.js}"></script>
+<script th:src="@{/js/nav-buttom.js}" type="text/javascript" charset="utf-8"></script>
+<script th:src="@{/js/zbutt.js}" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=A73cbd90c90dc8f155d0a5ccd00e130c"></script>
+<!--<script th:src="@{/js/hotelsearch.js}"></script>-->
+<!--<script th:src="@{/js/hothotel.js}" type="text/javascript" charset="utf-8"></script>-->
+<!--<script th:src="@{/js/hotelView.js}" type="text/javascript" charset="utf-8"></script>-->
+<script th:inline="javascript">
+    $(document).ready(function(){
+        var message = [[${stayInfo}]];
+        var user = [[${session.user}]];
+        map = new BMap.Map("stayMap");
+        var arr = JSON.parse(message.point);
+        console.log(arr);
+        map.centerAndZoom(new BMap.Point(arr.lng,arr.lat), 12);  // 初始化地图,设置中心点坐标和地图级别
+        //添加地图类型控件
+        map.addControl(new BMap.MapTypeControl({
+            mapTypes: [
+                BMAP_NORMAL_MAP,
+                BMAP_HYBRID_MAP
+            ]
+        }));
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+        var overView = new BMap.OverviewMapControl();
+        var overViewOpen = new BMap.OverviewMapControl({isOpen: true, anchor: BMAP_ANCHOR_BOTTOM_RIGHT});
+        map.addControl(overView);          //添加默认缩略地图控件
+        map.addControl(overViewOpen);      //右下角，打开
+
+        var marker = new BMap.Marker(new BMap.Point(arr.lng,arr.lat)); // 创建点
+        map.addOverlay(marker);            //增加点
+        var label = new BMap.Label(message.stayName,{offset:new BMap.Size(-10,30)});
+        marker.setLabel(label);
+
+        $("#orderAdd").click(function () {
+            if(user == null) {
+                window.location.href="/web/login.html";
+            }else{
+                var params = {stayNum:$("#stayNum").val(),userCode: user.code,stayCode: message.code,stayDay: $("#stayDay").val()};  //参数，注意参数名要注意和后台方法参数名要一致
+                $(function(){
+                    $.ajax({
+                        type:"GET",  //请求方式
+                        url:"/web/addStayOrder",  //请求路径：页面/方法名字
+                        data: params,     //参数
+                        dataType:"text",
+                        contentType:"application/json; charset=utf-8",
+                        beforeSend:function(XMLHttpRequest){
+                            $("#scneic-tip").text("正在生成,请等待");
+                        },
+                        success:function(msg){  //成功
+                            $("#scneic-tip").text("预定成功");
+                            $("#orderAdd").attr("disabled",true);
+                        },
+                        error:function(obj, msg, e){   //异常
+                            $("#scneic-tip").text("服务器正忙 请稍后再试");
+                        }
+                    });
+                });
+            }
+        })
+
+    });
+</script>
+</body>
+</html>

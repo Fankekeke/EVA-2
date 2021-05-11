@@ -1,0 +1,159 @@
+
+.hotel-main{
+    padding-top: 40px;
+    
+}
+.hotel-main-titile{
+    
+    font-size: 24px;
+}
+
+.form-srarch{
+    margin: 30px 0 40px 0;
+}
+
+.input-search{
+    margin-top: 15px;
+ 
+}
+
+.h-notice li h2{
+    font-size: 18px;
+    color: #666;
+    line-height: 18px;
+    font-weight: normal;
+}
+.h-notice li p{
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+.h-notice-right{
+    float: left;
+}
+.ico-hotel{
+    float: left;
+    height: 42px;
+    display: inline-block;
+    margin-right: 12px;
+    
+}
+.ico-hotel1{
+    width: 35px;
+    background: url('../images/hotel-sprites1_01.png')
+}
+.ico-hotel2{
+    width: 42px;
+    background: url('../images/hotel-sprites1_02.png')
+}
+.ico-hotel3{
+    width: 45px;    
+    background: url('../images/hotel-sprites1_03.png')
+}
+
+.hotel-titile  , .h-more{
+    font-size: 24px;
+    color: #333;
+    line-height: 30px;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.h-more a{
+    font-size: 24px;
+    color: #333;
+}  
+#h-tap{
+    margin-left: 0px;
+    
+}
+#h-tap li{
+    width: 14.28%;
+    text-align: center;
+}
+#h-tap a{
+    color: #666;
+    margin-bottom: 0px !important; 
+    
+}
+.hot-list li{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.hot-list img{
+    width: 100%;
+    
+}
+.h-img-shield{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    padding: 0 15px; 
+}
+.h-score{
+    width: 55px;
+    height: 25px;
+    font-size: 18px;
+    color: #FFF;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 25px;
+    top: 15px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 4px;
+    z-index: 5;
+}
+.h-info{
+    position: absolute;
+    z-index: 3;
+    left: 25px;
+    bottom: 15px;
+    width: 220px;
+    margin-top: -30px;
+    color: #FFF;
+ 
+}
+
+.h-shield{
+    width: 100%;
+    height: 100%;
+  
+    background: #000;
+    opacity: .2;
+    z-index: 2;
+}
+
+.h-more a:hover{
+    
+    color: orange !important;
+}
+@media(min-width:768px){
+    #btn-search{
+        margin-left: -20px;
+    }
+    #input-site{
+        margin-left: -15px;
+    }
+}
+
+@media(max-width:767px){
+    #btn-search button{
+        width: 100%;
+    }
+    .hotel-main-titile{
+        margin-left: 15px;
+    }
+    #h-tap a{
+        font-size: 14px ;
+    }
+    .nav>li {
+        margin-right: 18px;
+    }
+    .hotel-main{
+        padding-top: 20px;
+    }
+}
+

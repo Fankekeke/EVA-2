@@ -1,0 +1,118 @@
+@media (max-width: 767px) {
+	.bannerxq,
+	.carousel-caption{
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.ci {
+		top: 12%;
+		left: 88%;
+		width: 110px;
+		margin: 0;
+	}
+
+	.ci li {
+		border: 0;
+		border-radius: 0;
+		height: 60px;
+		width: 110px;
+	}
+
+	.ci li img {
+		border: 0;
+		border-radius: 0;
+		height: 60px;
+		width: 110px;
+	}
+
+	.ci li {
+		margin-bottom: 6px;
+		display: block;
+		text-indent: 0;
+	}
+
+	.ci > .active {
+		height: 60px;
+		width: 110px;
+		margin: 0 0 6px 0;
+		background-color: transparent;
+		border: 2px solid #ff9d00;
+	}
+
+	.ci > .active > img {
+		height: 56px;
+		width: 106px;
+	}
+
+	.carousel-caption {
+		text-align: left;
+		left: 12%;
+		bottom: 68%;
+	}
+
+	.bannerxq {
+		text-align: center;
+		width: 100%;
+		color: #fff;
+		font-size: 14px;
+		position: absolute;
+		bottom: 2%;
+		text-align: center;
+	}
+
+	.bannerxq > a {
+		color: #ff9d00;
+	}
+
+	.sbanner {
+		width: 100%;
+	}
+
+	.latest-activities .sbanner ol {
+		top: 160px;
+	}
+
+	.sbanner ol {
+		left: 75%;
+		top: 120px;
+	}
+
+	.sbanner ol .active {
+		margin: 1px;
+		height: 10px;
+		width: 15px;
+		background-color: #FFFF00;
+		border: #FFFF00;
+	}
+
+	.sbanner li {
+		height: 10px;
+		width: 15px;
+		background-color: #FFF
+	}
+
+	.small-ban {
+		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0);
+		padding: 0;
+		position: relative;
+		left: 0;
+		top: -20px;
+	}
+
+	.small-ban a {
+		color: #000;
+		text-decoration: none;
+		font-size: 16px;
+	}
+
+	.small-ban p {
+		color: #333;
+		font-size: 14px;
+	}
+
+	.sbanner > ol {
+		height: 20px;
+	}
+}

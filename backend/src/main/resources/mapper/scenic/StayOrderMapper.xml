@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.scenic.dao.StayOrderMapper">
+
+    <sql id="StayOrderInfoParam">
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="stayOrder.userCode != null and stayOrder.userCode!=''">
+                and so.user_code = #{stayOrder.userCode}
+            </if>
+            <if test="stayOrder.stayCode != null and stayOrder.stayCode!=''">
+                and so.stay_code = #{stayOrder.stayCode}
+            </if>
+        </trim>
+    </sql>
+
+    <select id="getStayOrderInfoByPage" resultType="Map" parameterType="cc.mrbird.febs.scenic.entity.StayOrder">
+        SELECT
+            so.id,
+            so.code,
+            so.stay_code AS stayCode,
+            so.stay_num AS stayNum,
+            so.stay_day AS stayDay,
+            so.stay_date AS stayDate,
+            so.stay_status AS stayStatus,
+            so.user_code AS userCode,
+            si.stay_name AS stayName,
+            ui.name AS userName
+        FROM
+            stay_order so
+            LEFT JOIN user_info ui ON so.user_code = ui.CODE
+            LEFT JOIN stay_info si ON so.stay_code = si.CODE
+            <include refid="StayOrderInfoParam"/>
+    </select>
+
+    <select id="getStatOrderByUser" resultType="Map" parameterType="cc.mrbird.febs.scenic.entity.StayOrder">
+        SELECT
+            so.id,
+            so.code,
+            so.stay_code AS stayCode,
+            so.stay_num AS stayNum,
+            so.stay_day AS stayDay,
+            so.stay_date AS stayDate,
+            so.stay_status AS stayStatus,
+            so.user_code AS userCode,
+            si.*
+        FROM
+            stay_order so
+            LEFT JOIN user_info ui ON so.user_code = ui.CODE
+            LEFT JOIN stay_info si ON so.stay_code = si.CODE
+        <include refid="StayOrderInfoParam"/>
+    </select>
+</mapper>

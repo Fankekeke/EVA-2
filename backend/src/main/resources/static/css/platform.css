@@ -1,0 +1,47 @@
+.plasale{
+    margin-bottom: 50px;
+}
+.plasale .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    background-color: #ff9d00;
+    border: 0;
+    border-radius: 0;
+}
+.plasale .nav>li {
+    min-height: 51px;
+}
+.plasale .nav>.active:hover a{
+    color: #fff;
+    cursor: default;
+    background-color: #ff9d00;
+}
+.plasale .nav>li>a{
+    border: 0;
+    border-radius: 0;
+}
+.plasale .nav>li:hover a{
+    border: 0;
+    color: #ff9d00;
+    background-color: #fff;
+}
+.plasale h3,
+.plasale h1{
+    text-align: center;
+}
+.cont{
+    padding: 30px;
+    margin-top: -1px;
+    margin-left: 20px;
+    border: 1px solid #ddd;
+    height: 500px;
+}
+.preview1,
+.preview{
+    display: none;
+    width: 200px;
+    height: 200px;
+}
+h1{
+    padding: 10px 0;
+}

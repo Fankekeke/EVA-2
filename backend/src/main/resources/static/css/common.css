@@ -1,0 +1,36 @@
+/*浏览器样式初始化*/
+body,ul,li,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    font-family: "微软雅黑";
+
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/*分页信息*/
+.pagination-msg{ 
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.pagination-box{
+	margin-top: 20px; 
+	float: left;
+	margin-right: 20px;
+}
+.page-box{
+    float: left !important;
+}
+.form{
+    margin-bottom: 20px;
+}
+.form .row{
+    margin-right: 0;
+}

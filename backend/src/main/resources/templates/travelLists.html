@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>游记列表</title>
+    <link rel="icon" type="images/x-icon" th:href="@{favicon.ico}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/travel_lists.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/nav.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/mytravelLists.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/normalizes.css}" /><!--CSS RESET-->
+    <link th:href="@{/css/camroll_slider.css}" rel="stylesheet">
+<!--    <link type="text/css" rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />-->
+    <style>
+        #my-slider {
+            width: 100%;
+            height: 404px;
+            color: white;
+        }
+
+        @media (max-width: 640px) {
+            #my-slider .crs-bar-roll-current {
+                width: 38px;
+                height: 38px;
+            }
+
+            #my-slider .crs-bar-roll-item {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        .demo {
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .customBootstrap .pagination > li > a {
+            margin-right: 5px;
+            border-radius: 2px;
+            background: #fff;
+            color: #333;
+            border-color: #ccc;
+            padding: 6px 15px;
+        }
+        .customBootstrap .pagination > li > a:hover,
+        .customBootstrap .pagination > li > a:focus {
+            color: #fff;
+            background: #fb9400;
+            border-color: #fb9400;
+        }
+        .customBootstrap .pagination > .active > a,
+        .customBootstrap .pagination > .active > a:hover,
+        .customBootstrap .pagination > .active > a:focus {
+            color: #fff;
+            background: #fb9400;
+            border-color: #fb9400;
+        }
+        .customBootstrap .pagination > .disabled > a,
+        .customBootstrap .pagination > .disabled > a:hover,
+        .customBootstrap .pagination > .disabled > a:focus {
+            color: #999;
+            background: #fff;
+            border-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        .pagination2 {
+            height: 30px;
+            margin: 10px 0;
+        }
+        .pagination2 a {
+            text-decoration: none;
+            border: solid 1px #c0d3e6;
+            color: #333;
+            border-left-width: 0;
+            height: 24px !important;
+        }
+        .pagination2 a {
+            height: 24px !important;
+            display: block;
+            float: left;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 24px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        .pagination2 .active {
+            background-color: #6babdd;
+            color: #fff;
+            padding: 0 10px;
+            border: solid 1px #5c95c1;
+        }
+        .pagination2 .prev {
+            border: solid 1px #c0d3e6;
+        }
+        .pagination2 .next {
+            border-left-width: 0;
+            border-right-width: 1px;
+        }
+        .pagination2 .active.prev,
+        .pagination2 .active.next {
+            color: #dcdcdc;
+            border-color: #efefef;
+            background: #fff;
+        }
+        .pagination2 a:hover {
+            background-color: #cde4f8;
+        }
+        .pagination2 .active:hover {
+            background-color: #6babdd;
+        }
+        .pagination2 a.disabled {
+            display: none;
+        }
+
+        .pagination4 .page a,
+        .pagination4 .page a:hover {
+            width: 100px;
+            text-align: center;
+            border: 1px solid #ddd;
+            color: #999;
+            background-color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+<div id="travel_lists">
+
+    <!--头部-->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false" class="navbar-toggle collapsed"><span class="icon-bar"></span> <span
+                        class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <a href="index" class="navbar-brand"><img src="/images/header-sprites3.png"
+                                                          th:src="@{/images/xz_logo2.png}" class="logo"></a></div>
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navcen">
+
+                    <li>
+                        <a  href="/web/index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="/web/travelLists.html?pageNo=1">旅游游记</a>
+                    </li>
+                    <li>
+                        <a href="/web/goods.html/北京">自由行</a>
+                    </li>
+                    <li>
+                        <a href="/web/hotelView.html?pageNo=1" style="position: relative;">订酒店</a>
+                    </li>
+                    <!--仅首页-->
+                    <li class="busentry">
+                        <a href="/web/salesshow.html">商家入驻</a>
+                    </li>
+                    <li th:if="${session.user}!=null">
+                        <a href="/web/getOrder.html">我的订单</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <div class="container">
+            <div class="lists_lunbo">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="lunbo_left">
+                            <div class="dom">
+                                <div class="lunbo_dom">
+                                    <span>历史文化精选</span>
+                                    <span><a href="/web/goods.html/北京" class="aa">&gt;</a></span>
+                                </div>
+                                <div class="lunbo_dom">
+                                    <span>国内目的地精选</span>
+                                    <span><a href="/web/goods.html/城" class="aa">&gt;</a></span>
+                                </div>
+                                <div class="lunbo_dom">
+                                    <span>奔向海岛</span>
+                                    <span><a href="/web/goods.html/三亚" class="aa">&gt;</a></span>
+                                </div>
+                            </div>
+                            <div class="sousuo">
+                                <input type="text"
+                                       class="form-control" placeholder="请输入您要旅游的目的地">
+                                <img @click="search()" class="sousuo_img" th:src="@{/images/searchc.png}"/>
+                            </div>
+                            <div class="sousuo_text" style="margin: 0">
+                                <!--<div class="sousuo_text_img">-->
+                                <!--<img th:src="@{images/1570971589logo2png.png}"/>-->
+                                <!--</div>-->
+                                <div class="sousuo_text_right" style="text-align: center;margin: 0">
+                                    <div>
+                                        <span class="text_top">欢迎你来到小至旅游</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div id="carousel-example-generic" class="carousel slide height" data-ride="carousel">
+                            <div class="carousel-inner" role="listbox">
+
+
+
+
+                                <div id="myCarousel" class="carousel slide">
+                                    <!-- 轮播（Carousel）指标 -->
+                                    <!-- 轮播（Carousel）项目 -->
+                                    <div class="carousel-inner">
+                                        <div id="my-slider" class="crs-wrap">
+                                            <div class="crs-screen">
+                                                <div class="crs-screen-roll">
+                                                    <div class="crs-screen-item" style="background-image: url('/images/lunbo1.png')">
+                                                        <div class="crs-screen-item-content"></div>
+                                                    </div>
+                                                    <div class="crs-screen-item" style="background-image: url('/images/lunbo2.png')">
+                                                        <div class="crs-screen-item-content"></div>
+                                                    </div>
+                                                    <div class="crs-screen-item" style="background-image: url('/images/lunbo3.png')">
+                                                        <div class="crs-screen-item-content"></div>
+                                                    </div>
+                                                    <div class="crs-screen-item" style="background-image: url('/images/lunbo4.png')">
+                                                        <div class="crs-screen-item-content"></div>
+                                                    </div>
+                                                    <div class="crs-screen-item" style="background-image: url('/images/lunbo5.png')">
+                                                        <div class="crs-screen-item-content"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="crs-bar" style="margin-bottom: 60px">
+                                                <div class="crs-bar-roll-current"></div>
+                                                <div class="crs-bar-roll-wrap">
+                                                    <div class="crs-bar-roll">
+                                                        <div class="crs-bar-roll-item" style="background-image: url('/images/lunbo1.png')"></div>
+                                                        <div class="crs-bar-roll-item" style="background-image: url('/images/lunbo2.png')"></div>
+                                                        <div class="crs-bar-roll-item" style="background-image: url('/images/lunbo3.png')"></div>
+                                                        <div class="crs-bar-roll-item" style="background-image: url('/images/lunbo4.png')"></div>
+                                                        <div class="crs-bar-roll-item" style="background-image: url('/images/lunbo5.png')"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <div class="lists_left">
+                        <div class="lists_left_top">
+                            <span>旅游攻略导航</span>
+                        </div>
+                        <!--<div class="lists_left_img">-->
+                        <!--<img th:src="@{images/month12-img5.jpg}"/>-->
+                        <!--</div>-->
+                        <div class="lists_left_chengshi">
+                            <span class="shuzi">1</span><span class="beijing">北京</span>
+                        </div>
+                        <div class="lists_left_chengshi">
+                            <span class="shuzi">2</span><span class="beijing">成都</span>
+                        </div>
+                        <div class="lists_left_chengshi">
+                            <span class="shuzi">3</span><span class="beijing">重庆</span>
+                        </div>
+                        <div class="lists_left_chengshi">
+                            <span class="shuzi">4</span><span class="beijing">福州</span>
+                        </div>
+                        <div class="lists_left_chengshi">
+                            <span class="shuzi">5</span><span class="beijing">厦门</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="lists_right">
+                        <div class="lists_left_top2">
+                            <span>旅游攻略</span>
+                        </div>
+
+                        <!-- 数据展示 Start ----------------------- -->
+
+                        <ul class="yj-list" style="display: block;">
+                            <li th:each="quest:${questList.records}">
+                                <div class="list-show" style="margin-left:0">
+                                    <a th:href="@{'/web/questionInfo.html/'+${quest.id}}" rel="nofollow">
+                                        <div class="list-name " th:text="${quest.questTitle}"></div>
+                                    </a>
+                                    <div class="list-auther">
+                                        <div class="list-auther-left">
+                                            <a>
+                                                <div class="list-auther-name">管理员</div>
+                                            </a>
+                                            <div class="list-scan" th:text="${quest.questDate}"></div>
+                                            <div class="list-comment"><i></i></div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div  style="text-align: center">
+                    <ul id="M-box" class="pagination pagination4"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--引入底部公共页面-->
+    <div th:replace="public_page :: myfooter"></div>
+</div>
+</body>
+<script th:src="@{/js/jquery-2.1.4.js}"></script>
+<script th:src="@{/js/vue.js}"></script>
+<script th:src="@{/js/axios.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+<script th:src="@{/js/layer/layer.js}"></script>
+<script th:src="@{/js/jq-paginator.js}"></script>
+<script>
+    var BaiDuUrl = 'https://www.baidu.com/s?wd=';
+    var baiduUrl = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su';
+    var getTravelUrl = "{:url('getTravel')}";
+    var getDetailsUrl = "{:url('getDetails')}";
+    var STATIC = '';
+    var NindexUrl = "error.html";// 首页
+    var NindexImgUrl = "error.html";// 首页图片
+    var NdestinationUrl = "destinationView";// 目的地
+    var Ntravel_listsUrl = "travelLists";//旅游游记
+    var NgoodsUrl = "goods";// 自由行
+    var NhotelUrl = "hotel";// 订酒店
+    var NsalesshowUrl = "salesshow"//商家入驻
+    var Nplatformshow = "{:url('store/Platform/platformshow')}"// 商家平台
+    var NloginshowUrl = "{:url('index/Login/loginshow')}"//登录
+    var Nreginshow = "{:url('index/Login/reginshow')}" //注册
+    var NcenterUrl = "{:url('center/index/center')}"//个人中心 我的小至 我的足迹
+    var NtravelnotesUrl = "{:url('travelnotes/travelnotes/travelnotes')}";//写游记
+</script>
+<script th:src="@{/js/nav-buttom.js}"></script>
+<script th:src="@{/js/camroll_slider.js}"></script>
+<script>
+    $("#my-slider").camRollSlider();
+</script>
+<!--<script th:src="@{/js/travelComponent.js}"></script>-->
+<!--<script th:src="@{/js/travel_lists.js}"></script>-->
+<script th:inline="javascript">
+    $(document).ready(function(){
+        var setCount = 0;
+        var message = [[${questList}]];
+        var pageNo = 1;
+        console.log(JSON.stringify(message));
+        $("#M-box").jqPaginator({
+            totalPages: message.pages,
+            visiblePages: 1,
+            currentPage: message.current,
+            prev: '<li class="prev"><a href="/web/travelLists.html?pageNo='+pageNo+'">上一页<\/a><\/li>',
+            next: '<li class="next"><a href="/web/travelLists.html?pageNo='+(pageNo+1)+'">下一页<\/a><\/li>',
+            page: '<li class="page"><a href="javascript:void(0);"> {{page}} / {{totalPages}} <\/a><\/li>',
+            onPageChange: function(n) {
+
+            }
+        })
+    });
+
+    $(".sousuo_img").click(function () {
+        if($(".form-control").val() != '') {
+            window.location.href="/web/goods.html/"+$(".form-control").val();
+        }
+    })
+
+
+</script>
+</html>
