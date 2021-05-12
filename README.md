@@ -56,10 +56,11 @@
 
 [![gN4bz4.png](https://z3.ax1x.com/2021/05/10/gN4bz4.png)](https://imgtu.com/i/gN4bz4)
 
-#### 备注
+#### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
 
-1.  项目详情->点击进入
-2.  联系我 VX: Storm_Berserker
+1.  有需要完整项目请联系 QQ：1258846421、VX: Storm_Berserker
+2.  价格私聊，可充当毕设
+3.  非诚勿扰
 
 #### 参与贡献
 
