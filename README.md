@@ -7,6 +7,11 @@
 
 后台包括： 管理员登录注册、用户管理、景区数据管理、住宿管理、公告管理、购票记录管理、住宿记录、系统监控等模块。
 
+#### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
+
+1.  有需要完整项目请联系 QQ：1258846421
+2.  价格私聊，可充当毕设
+
 #### 后端
 - [Spring Boot 2.1.0](http://spring.io/projects/spring-boot/)
 - [Mybatis-Plus](https://mp.baomidou.com/guide/)
@@ -55,12 +60,6 @@
 [![gN4TiT.png](https://z3.ax1x.com/2021/05/10/gN4TiT.png)](https://imgtu.com/i/gN4TiT)
 
 [![gN4bz4.png](https://z3.ax1x.com/2021/05/10/gN4bz4.png)](https://imgtu.com/i/gN4bz4)
-
-#### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
-
-1.  有需要完整项目请联系 QQ：1258846421、VX: Storm_Berserker
-2.  价格私聊，可充当毕设
-3.  非诚勿扰
 
 #### 参与贡献
 
