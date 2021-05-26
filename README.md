@@ -1,7 +1,7 @@
-# 基于SpringBoot的旅游景区项目
+# 基于Spring的旅游景区项目
 
 #### 介绍
-基于SpringBoot的旅游景区项目。旅游规划数据共享平台；规划应用层，包括基础资料子系统、现状分析子系统、旅游产品设计子系统和环境建设子系统，是开展旅游规划具体业务的工作平台；决策服务层，通过对基础信息和专题信息的查询检索和分析，为旅游规划资源评价、环境容量及客源分析、旅游设施选址、旅游交通网络规划提供决策辅助，是旅游规划的辅助决策平台。 
+基于Spring的旅游景区项目。旅游规划数据共享平台；规划应用层，包括基础资料子系统、现状分析子系统、旅游产品设计子系统和环境建设子系统，是开展旅游规划具体业务的工作平台；决策服务层，通过对基础信息和专题信息的查询检索和分析，为旅游规划资源评价、环境容量及客源分析、旅游设施选址、旅游交通网络规划提供决策辅助，是旅游规划的辅助决策平台。 
 
 前台包含：用户登录注册，景区信息展示、景区信息查询、景区预订、查看公告、查看酒店信息、酒店预订、查看订单等
 
@@ -11,21 +11,6 @@
 
 1.  有需要完整项目请联系 QQ：1258846421
 2.  价格私聊，可充当毕设
-
-#### 后端
-- [Spring Boot 2.1.0](http://spring.io/projects/spring-boot/)
-- [Mybatis-Plus](https://mp.baomidou.com/guide/)
-- [MySQL 5.7](https://dev.mysql.com/downloads/mysql/5.7.html#downloads),[Hikari](https://brettwooldridge.github.io/HikariCP/),[Redis](https://redis.io/)
-- [Shiro](http://shiro.apache.org/),[JWT](https://jwt.io/)
-
-#### 前端
-- [Thymeleaf](https://github.com/thymeleaf/thymeleaf)
-- [Vue 2.5.17](https://cn.vuejs.org/),[Vuex](https://vuex.vuejs.org/zh/),[Vue Router](https://router.vuejs.org/zh/)
-- [Axios](https://github.com/axios/axios)
-- [vue-apexcharts](https://apexcharts.com/vue-chart-demos/line-charts/)
-- [ant-design-vue](https://vuecomponent.github.io/ant-design-vue/docs/vue/introduce-cn/)
-- [webpack](https://www.webpackjs.com/),[yarn](https://yarnpkg.com/zh-Hans/)
-- [百度地图](https://lbsyun.baidu.com/)
 
 
 
