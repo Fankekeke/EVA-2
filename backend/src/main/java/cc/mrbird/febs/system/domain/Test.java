@@ -12,7 +12,7 @@ import java.util.Date;
 @TableName("t_test")
 @Excel("测试导入导出数据")
 public class Test {
-    private Long id;
+
     @ExcelField(value = "字段1", required = true, maxLength = 20,
             comment = "提示：必填，长度不能超过20个字符")
     private String field1;

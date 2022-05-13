@@ -11,6 +11,7 @@
     <a-form :form="form">
       <a-form-item label='Bean名称' v-bind="formItemLayout">
         <a-input style="width: 100%"
+                        v-model="job.beanName"
                         v-decorator="['beanName',
                    {rules: [
                     { required: true, message: 'Bean名称不能为空'},
@@ -18,14 +19,16 @@
                   ]}]"/>
       </a-form-item>
       <a-form-item label='方法名称' v-bind="formItemLayout">
-        <a-input v-decorator="['methodName',
+        <a-input v-model="job.methodName"
+                 v-decorator="['methodName',
                    {rules: [
                     { required: true, message: '方法名称不能为空'},
                     { max: 50, message: '长度不能超过50个字符'}
                   ]}]"/>
       </a-form-item>
       <a-form-item label='方法参数' v-bind="formItemLayout">
-        <a-input v-decorator="['params',
+        <a-input v-model="job.params"
+                 v-decorator="['params',
                    {rules: [
                     { max: 50, message: '长度不能超过50个字符'}
                   ]}]"/>
@@ -41,6 +44,7 @@
       <a-form-item label='备注信息' v-bind="formItemLayout">
         <a-textarea
           :rows="4"
+          v-model="job.remark"
           v-decorator="[
           'remark',
           {rules: [
@@ -101,7 +105,6 @@ export default {
       }
       this.form.validateFields((err, values) => {
         if (!err) {
-          this.setJobFields()
           this.$post('job', {
             ...this.job
           }).then(() => {
@@ -128,12 +131,6 @@ export default {
       } else {
         this.validateStatus = 'error'
         this.help = '请填写Cron表达式'
-      }
-    },
-    setJobFields () {
-      let values = this.form.getFieldsValue(['beanName', 'methodName', 'params', 'remark'])
-      if (typeof values !== 'undefined') {
-        Object.keys(values).forEach(_key => { this.job[_key] = values[_key] })
       }
     }
   }

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.cos.dao.OrderInfoMapper">
+
+    <!-- 分页查询订单信息 -->
+    <select id="orderInfoByPage" resultType="java.util.LinkedHashMap">
+        SELECT
+        oi.id,
+        oi.code,
+        oi.price,
+        oi.day_num AS dayNum,
+        oi.start_date AS startDate,
+        oi.end_date AS endDate,
+        oi.order_status AS orderStatus,
+        oi.create_date AS createDate,
+        ui.user_name AS userName,
+        ui.avatar,
+        rt.name,
+        rt.images,
+        rt.area,
+        rt.content,
+        hi.name AS hotelName,
+        hi.address,
+        hi.tag,
+        hi.content,
+        hi.point,
+        hi.policy,
+        hi.check_in AS checkIn
+        FROM
+        order_info oi
+        LEFT JOIN user_info ui ON ( ui.id = oi.user_id )
+        LEFT JOIN room_type rt ON ( rt.id = oi.type_id )
+        LEFT JOIN hotel_info hi ON ( hi.id = oi.hotel_id )
+        WHERE
+        1 = 1
+        <if test="orderInfo.code != null and orderInfo.code != ''">
+            AND oi.code LIKE CONCAT('%',#{orderInfo.code},'%')
+        </if>
+        <if test="orderInfo.orderStatus != null">
+            AND oi.order_status = #{orderInfo.orderStatus}
+        </if>
+        <if test="orderInfo.userName != null and orderInfo.userName != ''">
+            AND ui.user_name LIKE CONCAT('%',#{orderInfo.userName},'%')
+        </if>
+        <if test="orderInfo.userId != null">
+            AND hi.user_id LIKE CONCAT('%',#{orderInfo.userId},'%')
+        </if>
+        <if test="orderInfo.hotelName != null and orderInfo.hotelName != ''">
+            AND hi.name LIKE CONCAT('%',#{orderInfo.hotelName},'%')
+        </if>
+        <if test="orderInfo.roomName != null and orderInfo.roomName != ''">
+            AND rt.name LIKE CONCAT('%',#{orderInfo.roomName},'%')
+        </if>
+    </select>
+
+    <!-- 根据酒店ID获取统计信息 -->
+    <select id="orderInfoByHotelId" resultType="java.util.LinkedHashMap">
+        SELECT on1.num, on2.price, on3.roomNum FROM (SELECT IFNULL(count(1),0) AS num FROM order_info oi
+        WHERE oi.hotel_id = #{ hotelId }) AS on1,
+        (SELECT IFNULL(sum(oi.price),0) AS price FROM order_info oi
+        WHERE oi.hotel_id = #{ hotelId }) AS on2,
+        (SELECT IFNULL(sum(rt.room_num),0) AS roomNum FROM room_type rt
+        WHERE rt.hotel_id = #{ hotelId }) AS on3
+    </select>
+
+    <!-- 订单量统计 -->
+    <select id="orderNumByHotelId" resultType="java.util.LinkedHashMap">
+        SELECT
+        DATE_FORMAT( spo.days, '%m-%d' ) AS days,
+        COUNT( oi.`code` ) AS count,
+        IFNULL( SUM( oi.price ), 0 ) AS orderPrice
+        FROM
+        (
+        SELECT
+            DATE_SUB( curdate(), INTERVAL + 0 DAY ) days UNION
+        SELECT
+            DATE_SUB( curdate(), INTERVAL + 1 DAY ) UNION
+        SELECT
+            DATE_SUB( curdate(), INTERVAL + 2 DAY ) UNION
+        SELECT
+            DATE_SUB( curdate(), INTERVAL + 3 DAY ) UNION
+        SELECT
+            DATE_SUB( curdate(), INTERVAL + 4 DAY ) UNION
+        SELECT
+            DATE_SUB( curdate(), INTERVAL + 5 DAY ) UNION
+        SELECT
+        DATE_SUB( curdate(), INTERVAL + 6 DAY )) spo
+        LEFT JOIN order_info oi ON (
+        DATE_FORMAT( oi.create_date, '%Y-%m-%d' ) = DATE_FORMAT( spo.days, '%Y-%m-%d' ))  AND oi.hotel_id = #{ hotelId }
+        GROUP BY
+        days
+        ORDER BY
+        days ASC
+    </select>
+
+    <!-- 交易类型统计 -->
+    <select id="orderTypeByHotelId" resultType="java.util.LinkedHashMap">
+        SELECT
+        IFNULL( sum( oi.price ), 0 ) AS price,
+        rt.`name`
+        FROM
+        order_info oi
+        LEFT JOIN room_type rt ON ( rt.id = oi.type_id )
+        WHERE
+        oi.hotel_id = #{ hotelId }
+        GROUP BY
+        rt.id
+    </select>
+
+    <!-- 根据用户获取订单 -->
+    <select id="getOrderByUserId" resultType="java.util.LinkedHashMap">
+        SELECT
+        oi.id AS orderId,
+        oi.order_status AS orderStatus,
+        oi.create_date AS createDate,
+        rt.id,
+        rt.`name`,
+        rt.images,
+        rt.content,
+        oi.price,
+        hi.id AS shopId,
+        hi.`name` AS hotelName,
+        hi.images AS hotelImages,
+        eva.id AS evaluationStatus,
+        eva.content AS evaluationContent
+        FROM
+        order_info oi
+        LEFT JOIN room_type rt ON ( oi.type_id = rt.id )
+        LEFT JOIN hotel_info hi ON ( hi.id = rt.hotel_id )
+        LEFT JOIN evaluation eva ON ( eva.order_id = oi.id )
+        WHERE
+        1 = 1
+        AND oi.user_id = #{ userId }
+    </select>
+</mapper>

@@ -24,7 +24,6 @@
     <div>
       <!-- 表格区域 -->
       <a-table :columns="columns"
-               :rowKey="record => record.id"
                :dataSource="dataSource"
                :pagination="pagination"
                :loading="loading"

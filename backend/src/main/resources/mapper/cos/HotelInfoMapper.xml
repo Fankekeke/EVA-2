@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.cos.dao.HotelInfoMapper">
+
+    <!-- 分页查询民宿信息 -->
+    <select id="hotelInfoByPage" resultType="java.util.LinkedHashMap">
+        SELECT
+        hi.id,
+        hi.name,
+        hi.address,
+        hi.images,
+        hi.tag,
+        hi.content,
+        hi.point,
+        hi.policy,
+        hi.check_in AS checkIn,
+        hi.create_date AS createDate,
+        tu.LAST_LOGIN_TIME AS lastTime,
+        tu.`STATUS` AS hotelStatus
+        FROM
+        hotel_info hi
+        LEFT JOIN t_user tu ON ( tu.USER_ID = hi.user_id )
+        WHERE
+        1 = 1
+        <if test="hotelInfo.name != null and hotelInfo.name != ''">
+            AND hi.name LIKE CONCAT('%',#{hotelInfo.name},'%')
+        </if>
+        <if test="hotelInfo.address != null and hotelInfo.address != ''">
+            AND hi.address LIKE CONCAT('%',#{hotelInfo.address},'%')
+        </if>
+        <if test="hotelInfo.tag != null and hotelInfo.tag != ''">
+            AND hi.tag LIKE CONCAT('%',#{hotelInfo.tag},'%')
+        </if>
+    </select>
+</mapper>

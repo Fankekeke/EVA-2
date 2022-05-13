@@ -58,7 +58,7 @@
                :loading="loading"
                :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
                @change="handleTableChange" :scroll="{ x: 1500 }">
-        <template v-if="text" slot="icon" slot-scope="text, record">
+        <template slot="icon" slot-scope="text, record">
          <a-icon :type="text" />
         </template>
         <template slot="operation" slot-scope="text, record">

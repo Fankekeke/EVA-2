@@ -146,8 +146,8 @@ export default {
         this.$get('actuator/metrics/tomcat.global.sent'),
         this.$get('actuator/metrics/tomcat.global.request.max'),
         this.$get('actuator/metrics/tomcat.global.request'),
-        this.$get('actuator/metrics/tomcat.global.request'),
-        this.$get('actuator/metrics/tomcat.global.request.max'),
+        this.$get('actuator/metrics/tomcat.servlet.request'),
+        this.$get('actuator/metrics/tomcat.servlet.request.max'),
         this.$get('actuator/metrics/tomcat.threads.current'),
         this.$get('actuator/metrics/tomcat.threads.config.max')
       ]).then((r) => {

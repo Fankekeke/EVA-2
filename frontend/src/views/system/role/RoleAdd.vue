@@ -13,11 +13,12 @@
                    v-bind="formItemLayout"
                    :validateStatus="validateStatus"
                    :help="help">
-        <a-input @blur="handleRoleNameBlur" v-decorator="['roleName']"/>
+        <a-input @blur="handleRoleNameBlur" v-model="role.roleName" v-decorator="['roleName']"/>
       </a-form-item>
       <a-form-item label='角色描述' v-bind="formItemLayout">
         <a-textarea
           :rows="4"
+          v-model="role.remark"
           v-decorator="[
           'remark',
           {rules: [
@@ -143,7 +144,6 @@ export default {
       } else {
         this.form.validateFields((err, values) => {
           if (!err) {
-            this.setRoleFields()
             this.loading = true
             this.role.menuId = checkedArr.join(',')
             this.$post('role', {
@@ -159,8 +159,7 @@ export default {
       }
     },
     handleRoleNameBlur () {
-      let roleName = this.form.getFieldValue('roleName')
-      roleName = typeof roleName === 'undefined' ? '' : roleName.trim()
+      let roleName = this.role.roleName.trim()
       if (roleName.length) {
         if (roleName.length > 10) {
           this.validateStatus = 'error'
@@ -180,12 +179,6 @@ export default {
       } else {
         this.validateStatus = 'error'
         this.help = '角色名称不能为空'
-      }
-    },
-    setRoleFields () {
-      let values = this.form.getFieldsValue(['roleName', 'remark'])
-      if (typeof values !== 'undefined') {
-        Object.keys(values).forEach(_key => { this.role[_key] = values[_key] })
       }
     }
   },

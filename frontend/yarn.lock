@@ -2,25 +2,18 @@
 # yarn lockfile v1
 
 
-"@ant-design/colors@^3.1.0":
-  version "3.2.2"
-  resolved "https://registry.npm.taobao.org/@ant-design/colors/download/@ant-design/colors-3.2.2.tgz#5ad43d619e911f3488ebac303d606e66a8423903"
-  integrity sha1-WtQ9YZ6RHzSI66wwPWBuZqhCOQM=
+"@ant-design/icons-vue@^1.0.1":
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/@ant-design/icons-vue/download/@ant-design/icons-vue-1.0.1.tgz#343579219c04190831c9ca3826aec7361bb8b4d4"
+  integrity sha1-NDV5IZwEGQgxyco4Jq7HNhu4tNQ=
   dependencies:
-    tinycolor2 "^1.4.1"
-
-"@ant-design/icons-vue@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/@ant-design/icons-vue/download/@ant-design/icons-vue-2.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40ant-design%2Ficons-vue%2Fdownload%2F%40ant-design%2Ficons-vue-2.0.0.tgz#0357f5010a404e9f34a87a4b41b2a08df691dbce"
-  integrity sha1-A1f1AQpATp80qHpLQbKgjfaR284=
-  dependencies:
-    "@ant-design/colors" "^3.1.0"
+    ant-design-palettes "^1.1.3"
     babel-runtime "^6.26.0"
 
-"@ant-design/icons@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.npm.taobao.org/@ant-design/icons/download/@ant-design/icons-2.1.1.tgz?cache=0&sync_timestamp=1581325866439&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40ant-design%2Ficons%2Fdownload%2F%40ant-design%2Ficons-2.1.1.tgz#7b9c08dffd4f5d41db667d9dbe5e0107d0bd9a4a"
-  integrity sha1-e5wI3/1PXUHbZn2dvl4BB9C9mko=
+"@ant-design/icons@^1.1.15":
+  version "1.1.16"
+  resolved "http://registry.npm.taobao.org/@ant-design/icons/download/@ant-design/icons-1.1.16.tgz#ac6426216934e3f4bc108f2f48f92ed66789235e"
+  integrity sha1-rGQmIWk04/S8EI8vSPku1meJI14=
 
 "@babel/code-frame@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -247,16 +240,23 @@ ansi-styles@^3.2.0, ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-ant-design-vue@^1.4.0:
-  version "1.4.10"
-  resolved "https://registry.npm.taobao.org/ant-design-vue/download/ant-design-vue-1.4.10.tgz#26bf3570a3c93d54bae571e98f29457b0fd116d8"
-  integrity sha1-Jr81cKPJPVS65XHpjylFew/RFtg=
+ant-design-palettes@^1.1.3:
+  version "1.1.3"
+  resolved "http://registry.npm.taobao.org/ant-design-palettes/download/ant-design-palettes-1.1.3.tgz#84119b1a4d86363adc52a38d587e65336a0a27dd"
+  integrity sha1-hBGbGk2GNjrcUqONWH5lM2oKJ90=
   dependencies:
-    "@ant-design/icons" "^2.1.1"
-    "@ant-design/icons-vue" "^2.0.0"
+    tinycolor2 "^1.4.1"
+
+ant-design-vue@^1.3.7:
+  version "1.3.7"
+  resolved "http://registry.npm.taobao.org/ant-design-vue/download/ant-design-vue-1.3.7.tgz#5e26c875ac636df1c20f076baa142aca62f97f14"
+  integrity sha1-XibIdaxjbfHCDwdrqhQqymL5fxQ=
+  dependencies:
+    "@ant-design/icons" "^1.1.15"
+    "@ant-design/icons-vue" "^1.0.1"
     add-dom-event-listener "^1.0.2"
     array-tree-filter "^2.1.0"
-    async-validator "^3.0.3"
+    async-validator "^1.8.2"
     babel-helper-vue-jsx-merge-props "^2.0.3"
     babel-runtime "6.x"
     classnames "^2.2.5"
@@ -272,7 +272,6 @@ ant-design-vue@^1.4.0:
     lodash "^4.17.5"
     moment "^2.21.0"
     mutationobserver-shim "^0.3.2"
-    node-emoji "^1.10.0"
     omit.js "^1.0.0"
     raf "^3.4.0"
     resize-observer-polyfill "^1.5.1"
@@ -445,10 +444,12 @@ async-limiter@~1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/async-limiter/download/async-limiter-1.0.0.tgz#78faed8c3d074ab81f22b4e985d79e8738f720f8"
 
-async-validator@^3.0.3:
-  version "3.2.3"
-  resolved "https://registry.npm.taobao.org/async-validator/download/async-validator-3.2.3.tgz?cache=0&sync_timestamp=1575620590760&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fasync-validator%2Fdownload%2Fasync-validator-3.2.3.tgz#b38b72f9c08c1d28548df13bb260b6908448ca49"
-  integrity sha1-s4ty+cCMHShUjfE7smC2kIRIykk=
+async-validator@^1.8.2:
+  version "1.10.1"
+  resolved "http://registry.npm.taobao.org/async-validator/download/async-validator-1.10.1.tgz#41e9b0b9f8e719e6edf946372f018a958c2e70f3"
+  integrity sha1-QemwufjnGebt+UY3LwGKlYwucPM=
+  dependencies:
+    babel-runtime "6.x"
 
 async@^1.4.0, async@^1.5.2:
   version "1.5.2"
@@ -4926,11 +4927,6 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "http://registry.npm.taobao.org/lodash.sortby/download/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
 
-lodash.toarray@^4.4.0:
-  version "4.4.0"
-  resolved "https://registry.npm.taobao.org/lodash.toarray/download/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
-  integrity sha1-JMS/zWsvuji/0FlNsRedjptlZWE=
-
 lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "http://registry.npm.taobao.org/lodash.uniq/download/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
@@ -5369,13 +5365,6 @@ node-cache@^4.1.1:
   dependencies:
     clone "2.x"
     lodash "4.x"
-
-node-emoji@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.npm.taobao.org/node-emoji/download/node-emoji-1.10.0.tgz#8886abd25d9c7bb61802a658523d1f8d2a89b2da"
-  integrity sha1-iIar0l2ce7YYAqZYUj0fjSqJsto=
-  dependencies:
-    lodash.toarray "^4.4.0"
 
 node-forge@0.7.5:
   version "0.7.5"
@@ -7928,8 +7917,7 @@ vue-style-loader@^3.0.0, vue-style-loader@^3.0.1:
 
 vue-template-compiler@2.5.17:
   version "2.5.17"
-  resolved "https://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.5.17.tgz?cache=0&sync_timestamp=1576267389403&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fvue-template-compiler%2Fdownload%2Fvue-template-compiler-2.5.17.tgz#52a4a078c327deb937482a509ae85c06f346c3cb"
-  integrity sha1-UqSgeMMn3rk3SCpQmuhcBvNGw8s=
+  resolved "http://registry.npm.taobao.org/vue-template-compiler/download/vue-template-compiler-2.5.17.tgz#52a4a078c327deb937482a509ae85c06f346c3cb"
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"

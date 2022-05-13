@@ -60,7 +60,6 @@ export default {
   },
   methods: {
     renderIcon: function (h, icon) {
-      if (icon === undefined || icon === '') icon = 'none'
       return icon === 'none' ? null
         : h(
           Icon,

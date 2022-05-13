@@ -10,7 +10,8 @@
     style="height: calc(100% - 55px);overflow: auto;padding-bottom: 53px;">
     <a-form :form="form">
       <a-form-item label='菜单名称' v-bind="formItemLayout">
-        <a-input v-decorator="['menuName',
+        <a-input v-model="menu.menuName"
+                 v-decorator="['menuName',
                    {rules: [
                     { required: true, message: '菜单名称不能为空'},
                     { max: 10, message: '长度不能超过10个字符'}
@@ -18,7 +19,8 @@
       </a-form-item>
       <a-form-item label='菜单URL'
                    v-bind="formItemLayout">
-        <a-input v-decorator="['path',
+        <a-input v-model="menu.path"
+                 v-decorator="['path',
                  {rules: [
                   { required: true, message: '菜单URL不能为空'},
                   { max: 50, message: '长度不能超过50个字符'}
@@ -26,14 +28,16 @@
       </a-form-item>
       <a-form-item label='组件地址'
                    v-bind="formItemLayout">
-        <a-input v-decorator="['component',
+        <a-input v-model="menu.component"
+                 v-decorator="['component',
                  {rules: [
                   { required: true, message: '组件地址不能为空'},
                   { max: 100, message: '长度不能超过100个字符'}
                 ]}]"/>
       </a-form-item>
       <a-form-item label='相关权限' v-bind="formItemLayout">
-        <a-input v-decorator="['perms',
+        <a-input v-model="menu.perms"
+                 v-decorator="['perms',
                    {rules: [
                     { max: 50, message: '长度不能超过50个字符'}
                   ]}]"/>
@@ -158,7 +162,6 @@ export default {
       }
       this.form.validateFields((err, values) => {
         if (!err) {
-          this.setMenuFields()
           this.loading = true
           if (checkedArr.length) {
             this.menu.parentId = checkedArr[0]
@@ -177,12 +180,6 @@ export default {
           })
         }
       })
-    },
-    setMenuFields () {
-      let values = this.form.getFieldsValue(['menuName', 'path', 'component', 'perms'])
-      if (typeof values !== 'undefined') {
-        Object.keys(values).forEach(_key => { this.menu[_key] = values[_key] })
-      }
     }
   },
   watch: {

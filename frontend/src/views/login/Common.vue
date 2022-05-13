@@ -3,8 +3,8 @@
     <div class="content">
       <div class="top">
         <div class="header">
-<!--          <img alt="logo" class="logo" src="static/img/logo.png" />-->
-          <span class="title" style="color: black">{{systemName}}</span>
+          <img alt="logo" class="logo" src="static/img/logo.png" />
+          <span class="title">{{systemName}}</span>
         </div>
         <div class="desc"></div>
       </div>

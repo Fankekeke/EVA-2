@@ -8,11 +8,6 @@ import HomePageView from '@/views/HomePage'
 import db from 'utils/localstorage'
 import request from 'utils/request'
 
-// 全局Router异常处理
-const originalPush = Router.prototype.push
-Router.prototype.push = function push (location) {
-  return originalPush.call(this, location).catch(err => { if (typeof err !== 'undefined')console.log(err) })
-}
 Vue.use(Router)
 
 let constRouter = [
@@ -51,7 +46,7 @@ router.beforeEach((to, from, next) => {
           asyncRouter = res.data
           save('USER_ROUTER', asyncRouter)
           go(to, next)
-        }).catch(err => { console.error(err) })
+        })
       } else {
         asyncRouter = userRouter
         go(to, next)

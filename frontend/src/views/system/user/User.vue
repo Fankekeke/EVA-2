@@ -62,7 +62,6 @@
       <!-- 表格区域 -->
       <a-table ref="TableInfo"
                :columns="columns"
-               :rowKey="record => record.userId"
                :dataSource="dataSource"
                :pagination="pagination"
                :loading="loading"
@@ -288,8 +287,9 @@ export default {
         centered: true,
         onOk () {
           let userIds = []
-          let selectedRowKeysStr = ',' + that.selectedRowKeys.join(',') + ','
-          userIds.push(that.dataSource.filter(f => { return selectedRowKeysStr.indexOf(',' + f.userId + ',') > -1 }).map(m => { return m.userId }))
+          for (let key of that.selectedRowKeys) {
+            userIds.push(that.dataSource[key].userId)
+          }
           that.$delete('user/' + userIds.join(',')).then(() => {
             that.$message.success('删除成功')
             that.selectedRowKeys = []
@@ -313,8 +313,9 @@ export default {
         centered: true,
         onOk () {
           let usernames = []
-          let selectedRowKeysStr = ',' + that.selectedRowKeys.join(',') + ','
-          usernames.push(that.dataSource.filter(f => { return selectedRowKeysStr.indexOf(',' + f.userId + ',') > -1 }).map(m => { return m.username }))
+          for (let key of that.selectedRowKeys) {
+            usernames.push(that.dataSource[key].username)
+          }
           that.$put('user/password/reset', {
             usernames: usernames.join(',')
           }).then(() => {

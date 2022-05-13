@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/febs_shiro_jwt.iml" filepath="$PROJECT_DIR$/febs_shiro_jwt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FEBS_FanK.iml" filepath="$PROJECT_DIR$/FEBS_FanK.iml" />
     </modules>
   </component>
 </project>

@@ -11,7 +11,6 @@
       </div>
       <!-- 表格区域 -->
       <a-table :columns="columns"
-               :rowKey="record => record.index"
                :dataSource="dataSource"
                :pagination="pagination"
                :loading="loading"
@@ -132,13 +131,10 @@ export default {
         let data = r.data
         this.loading = false
         let filterData = []
-        let _index = 0
         for (let d of data.traces) {
           if (d.request.method !== 'OPTIONS' &&
             d.request.uri.indexOf('httptrace') === -1) {
-            d.index = _index
             filterData.push(d)
-            _index++
           }
         }
         this.dataSource = filterData

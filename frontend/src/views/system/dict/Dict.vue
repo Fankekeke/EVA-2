@@ -66,7 +66,6 @@
       <!-- 表格区域 -->
       <a-table ref="TableInfo"
                :columns="columns"
-               :rowKey="record => record.dictId"
                :dataSource="dataSource"
                :pagination="pagination"
                :loading="loading"
@@ -200,8 +199,11 @@ export default {
         content: '当您点击确定按钮后，这些记录将会被彻底删除',
         centered: true,
         onOk () {
-          let dictIds = that.selectedRowKeys.join(',')
-          that.$delete('dict/' + dictIds).then(() => {
+          let dictIds = []
+          for (let key of that.selectedRowKeys) {
+            dictIds.push(that.dataSource[key].dictId)
+          }
+          that.$delete('dict/' + dictIds.join(',')).then(() => {
             that.$message.success('删除成功')
             that.selectedRowKeys = []
             that.search()

@@ -13,16 +13,18 @@
                    v-bind="formItemLayout"
                    :validateStatus="validateStatus"
                    :help="help">
-        <a-input @blur="handleUserNameBlur"
+        <a-input v-model="user.username"
+                 @blur="handleUserNameBlur"
                  v-decorator="['username',{rules: [{ required: true, message: '用户名不能为空'}]}]"/>
       </a-form-item>
       <a-form-item label='密码' v-bind="formItemLayout">
         <a-tooltip title='新用户默认密码为 1234qwer'>
-          <a-input type='password' readOnly v-decorator="['password',{ initialValue:defaultPassword }]" />
+          <a-input type='password' readOnly :value="defaultPassword"/>
         </a-tooltip>
       </a-form-item>
       <a-form-item label='邮箱' v-bind="formItemLayout">
         <a-input
+          v-model="user.email"
           v-decorator="['email',{rules: [
             { type: 'email', message: '请输入正确的邮箱' },
             { max: 50, message: '长度不能超过50个字符'}
@@ -30,6 +32,7 @@
       </a-form-item>
       <a-form-item label="手机" v-bind="formItemLayout">
         <a-input
+          v-model="user.mobile"
           v-decorator="['mobile', {rules: [
             { pattern: '^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$', message: '请输入正确的手机号'}
           ]}]"/>
@@ -38,8 +41,9 @@
         <a-select
           mode="multiple"
           :allowClear="true"
+          v-model="user.roleId"
           style="width: 100%"
-          v-decorator="['roleId',{rules: [{ required: true, message: '请选择角色' }]}]">
+          v-decorator="['role',{rules: [{ required: true, message: '请选择角色' }]}]">
           <a-select-option v-for="r in roleData" :key="r.roleId">{{r.roleName}}</a-select-option>
         </a-select>
       </a-form-item>
@@ -48,11 +52,13 @@
           :allowClear="true"
           :dropdownStyle="{ maxHeight: '220px', overflow: 'auto' }"
           :treeData="deptTreeData"
-          v-decorator="['deptId']">
+          v-decorator="['deptId']"
+          v-model="user.deptId">
         </a-tree-select>
       </a-form-item>
       <a-form-item label='状态' v-bind="formItemLayout">
         <a-radio-group
+          v-model="user.status"
           v-decorator="['status',{rules: [{ required: true, message: '请选择状态'}]}]">
           <a-radio value="0">锁定</a-radio>
           <a-radio value="1">有效</a-radio>
@@ -60,6 +66,7 @@
       </a-form-item>
       <a-form-item label='性别' v-bind="formItemLayout">
         <a-radio-group
+          v-model="user.ssex"
           v-decorator="['ssex',{rules: [{ required: true, message: '请选择性别' }]}]">
           <a-radio value="0">男</a-radio>
           <a-radio value="1">女</a-radio>
@@ -120,7 +127,6 @@ export default {
       }
       this.form.validateFields((err, values) => {
         if (!err && this.validateStatus === 'success') {
-          this.setUserFields()
           this.loading = true
           this.user.roleId = this.user.roleId.join(',')
           this.$post('user', {
@@ -135,8 +141,7 @@ export default {
       })
     },
     handleUserNameBlur () {
-      let username = this.form.getFieldValue('username')
-      username = typeof username === 'undefined' ? '' : username.trim()
+      let username = this.user.username.trim()
       if (username.length) {
         if (username.length > 10) {
           this.validateStatus = 'error'
@@ -160,20 +165,6 @@ export default {
         this.validateStatus = 'error'
         this.help = '用户名不能为空'
       }
-    },
-    setUserFields () {
-      let values = this.form.getFieldsValue(['username', 'password', 'email', 'mobile', 'roleId', 'deptId', 'status', 'ssex'])
-      if (typeof values !== 'undefined') {
-        Object.keys(values).forEach(_key => { this.user[_key] = values[_key] })
-      }
-      // this.user.username = values.username
-      // this.user.password = values.password
-      // this.user.email = values.email
-      // this.user.mobile = values.mobile
-      // this.user.roleId = values.roleId
-      // this.user.deptId = values.deptId
-      // this.user.status = values.status
-      // this.user.ssex = values.ssex
     }
   },
   watch: {
