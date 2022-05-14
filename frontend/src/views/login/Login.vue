@@ -1,9 +1,9 @@
 <template>
-  <div class="login">
-    <a-form @submit.prevent="doLogin" :autoFormCreate="(form) => this.form = form">
-      <a-tabs size="large" :tabBarStyle="{textAlign: 'center'}" style="padding: 0 2px;" :activeKey="activeKey"
-              @change="handleTabsChange">
-        <a-tab-pane tab="账户密码登录" key="1">
+  <a-card :bordered="false" hoverable style="margin-top: 130px;background-color: #f9f9f9">
+    <div style="text-align: left;font-size: 14px;margin-bottom: 30px"><b>一体式旅游管理平台</b></div>
+    <div class="login">
+      <a-form @submit.prevent="doLogin" :autoFormCreate="(form) => this.form = form">
+        <div>
           <a-alert type="error" :closable="true" v-show="error" :message="error" showIcon
                    style="margin-bottom: 24px;"></a-alert>
           <a-form-item
@@ -16,41 +16,22 @@
           <a-form-item
             fieldDecoratorId="password"
             :fieldDecoratorOptions="{rules: [{ required: true, message: '请输入密码', whitespace: true}]}">
-            <a-input size="large" type="password">
+            <a-input type="password" size="large">
               <a-icon slot="prefix" type="lock"></a-icon>
             </a-input>
           </a-form-item>
-        </a-tab-pane>
-        <a-tab-pane tab="手机号登录" key="2">
-          <a-form-item>
-            <a-input size="large">
-              <a-icon slot="prefix" type="mobile"></a-icon>
-            </a-input>
-          </a-form-item>
-          <a-form-item>
-            <a-row :gutter="8" style="margin: 0 -4px">
-              <a-col :span="16">
-                <a-input size="large">
-                  <a-icon slot="prefix" type="mail"></a-icon>
-                </a-input>
-              </a-col>
-              <a-col :span="8" style="padding-left: 4px">
-                <a-button style="width: 100%" class="captcha-button" size="large" @click="getCaptcha">获取验证码</a-button>
-              </a-col>
-            </a-row>
-          </a-form-item>
-        </a-tab-pane>
-      </a-tabs>
-      <a-form-item>
-        <a-button :loading="loading" style="width: 100%; margin-top: 4px" size="large" htmlType="submit" type="primary">
-          登录
-        </a-button>
-      </a-form-item>
-      <div>
-        <a style="float: right" @click="regist">注册账户</a>
-      </div>
-    </a-form>
-  </div>
+        </div>
+        <a-form-item>
+          <a-button size="large" :loading="loading" style="width: 100%; margin-top: 4px" htmlType="submit" type="primary">
+            登录
+          </a-button>
+        </a-form-item>
+        <div>
+          <a style="float: right" @click="regist">用户注册</a>
+        </div>
+      </a-form>
+    </div>
+  </a-card>
 </template>
 
 <script>

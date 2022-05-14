@@ -1,89 +1,58 @@
 <template>
-  <div class="user-layout-register">
-    <a-form ref="formRegister" :autoFormCreate="(form)=>{this.form = form}" id="formRegister">
-      <a-form-item
-        fieldDecoratorId="email"
-        :fieldDecoratorOptions="{rules: [{ required: true, message: '请输入注册账号' },  { validator: this.handleUsernameCheck }], validateTrigger: ['change', 'blur']}">
-        <a-input size="large" type="text" v-model="username" placeholder="账号"></a-input>
-      </a-form-item>
-      <a-popover placement="rightTop" trigger="click" :visible="state.passwordLevelChecked">
-        <template slot="content">
-          <div :style="{ width: '240px' }">
-            <div :class="['user-register', passwordLevelClass]">强度：<span>{{ passwordLevelName }}</span></div>
-            <a-progress :percent="state.percent" :showInfo="false" :strokeColor=" passwordLevelColor "/>
-            <div style="margin-top: 10px;">
-              <span>请至少输入 6 个字符。请不要使用容易被猜到的密码。</span>
-            </div>
-          </div>
-        </template>
+  <a-card :bordered="false" hoverable style="margin-top: 130px">
+    <div style="text-align: left;font-size: 14px;margin-bottom: 30px"><b>一体式旅游管理平台</b></div>
+    <div class="user-layout-register">
+      <a-form ref="formRegister" :autoFormCreate="(form)=>{this.form = form}" id="formRegister">
         <a-form-item
-          fieldDecoratorId="password"
-          :fieldDecoratorOptions="{rules: [{ required: true, message: '至少6位密码'}, { validator: this.handlePasswordLevel }], validateTrigger: ['change', 'blur']}">
-          <a-input size="large" v-model="password" type="password" @click="handlePasswordInputClick" autocomplete="false"
-                   placeholder="至少6位密码"></a-input>
+          fieldDecoratorId="name"
+          :fieldDecoratorOptions="{rules: [{ required: true, message: '请输入酒店名称' }]}">
+          <a-input type="text" v-model="hotelName" placeholder="酒店名称"></a-input>
         </a-form-item>
-      </a-popover>
-
-      <a-form-item
-        fieldDecoratorId="password2"
-        :fieldDecoratorOptions="{rules: [{ required: true, message: '至少6位密码' }, { validator: this.handlePasswordCheck }], validateTrigger: ['change', 'blur']}">
-
-        <a-input size="large" type="password" autocomplete="false" placeholder="确认密码"></a-input>
-      </a-form-item>
-      <!--
-      <a-form-item
-        fieldDecoratorId="mobile"
-        :fieldDecoratorOptions="{rules: [{ required: true, message: '请输入正确的手机号', pattern: /^1[3456789]\d{9}$/ }, { validator: this.handlePhoneCheck } ], validateTrigger: ['change', 'blur'] }">
-        <a-input size="large" placeholder="11 位手机号">
-          <a-select slot="addonBefore" size="large" defaultValue="+86">
-            <a-select-option value="+86">+86</a-select-option>
-            <a-select-option value="+87">+87</a-select-option>
-          </a-select>
-        </a-input>
-      </a-form-item>
-      <a-input-group size="large" compact>
-            <a-select style="width: 20%" size="large" defaultValue="+86">
-              <a-select-option value="+86">+86</a-select-option>
-              <a-select-option value="+87">+87</a-select-option>
-            </a-select>
-            <a-input style="width: 80%" size="large" placeholder="11 位手机号"></a-input>
-          </a-input-group>
-
-      <a-row :gutter="16">
-        <a-col class="gutter-row" :span="16">
+        <a-divider orientation="left"><span style="font-size: 12px">账户注册</span></a-divider>
+        <a-form-item
+          fieldDecoratorId="email"
+          :fieldDecoratorOptions="{rules: [{ required: true, message: '请输入注册账号' },  { validator: this.handleUsernameCheck }], validateTrigger: ['change', 'blur']}">
+          <a-input type="text" v-model="username" placeholder="账号"></a-input>
+        </a-form-item>
+        <a-popover placement="rightTop" trigger="click" :visible="state.passwordLevelChecked">
+          <template slot="content">
+            <div :style="{ width: '240px' }">
+              <div :class="['user-register', passwordLevelClass]">强度：<span>{{ passwordLevelName }}</span></div>
+              <a-progress :percent="state.percent" :showInfo="false" :strokeColor=" passwordLevelColor "/>
+              <div style="margin-top: 10px;">
+                <span>请至少输入 6 个字符。请不要使用容易被猜到的密码。</span>
+              </div>
+            </div>
+          </template>
           <a-form-item
-            fieldDecoratorId="captcha"
-            :fieldDecoratorOptions="{rules: [{ required: true, message: '请输入验证码' }], validateTrigger: 'blur'}">
-            <a-input size="large" type="text" placeholder="验证码">
-              <a-icon slot="prefix" type='mail' :style="{ color: 'rgba(0,0,0,.25)' }"/>
-            </a-input>
+            fieldDecoratorId="password"
+            :fieldDecoratorOptions="{rules: [{ required: true, message: '至少6位密码'}, { validator: this.handlePasswordLevel }], validateTrigger: ['change', 'blur']}">
+            <a-input v-model="password" type="password" @click="handlePasswordInputClick" autocomplete="false"
+                     placeholder="至少6位密码"></a-input>
           </a-form-item>
-        </a-col>
-        <a-col class="gutter-row" :span="8">
-          <a-button
-            class="getCaptcha"
-            size="large"
-            :disabled="state.smsSendBtn"
-            @click.stop.prevent="getCaptcha"
-            v-text="!state.smsSendBtn && '获取验证码'||(state.time+' s')"></a-button>
-        </a-col>
-      </a-row>
--->
-      <a-form-item>
-        <a-button
-          size="large"
-          type="primary"
-          htmlType="submit"
-          class="register-button"
-          :loading="registerBtn"
-          @click.stop.prevent="handleSubmit"
-          :disabled="registerBtn">立即注册
-        </a-button>
-        <a class="login" @click="returnLogin">使用已有账户登录</a>
-      </a-form-item>
+        </a-popover>
 
-    </a-form>
-  </div>
+        <a-form-item
+          fieldDecoratorId="password2"
+          :fieldDecoratorOptions="{rules: [{ required: true, message: '至少6位密码' }, { validator: this.handlePasswordCheck }], validateTrigger: ['change', 'blur']}">
+
+          <a-input type="password" autocomplete="false" placeholder="确认密码"></a-input>
+        </a-form-item>
+        <a-form-item>
+          <a-button
+            type="primary"
+            htmlType="submit"
+            class="register-button"
+            :loading="registerBtn"
+            @click.stop.prevent="handleSubmit"
+            :disabled="registerBtn">立即注册
+          </a-button>
+          <a class="login" @click="returnLogin">使用已有账户登录</a>
+        </a-form-item>
+
+      </a-form>
+    </div>
+  </a-card>
 </template>
 
 <script>
@@ -111,6 +80,7 @@ export default {
   data () {
     return {
       form: null,
+      hotelName: '',
       username: '',
       password: '',
       state: {
@@ -219,7 +189,8 @@ export default {
         if (!err) {
           this.$post('regist', {
             username: this.username,
-            password: this.password
+            password: this.password,
+            hotelName: this.hotelName
           }).then(() => {
             this.$message.success('注册成功')
             this.returnLogin()

@@ -2,7 +2,7 @@
   <a-layout-header :class="[fixHeader && 'ant-header-fixedHeader', layout === 'side' ? (sidebarOpened ? 'ant-header-side-opened' : 'ant-header-side-closed') : null, theme, 'global-header' ]">
     <div :class="['global-header-wide', layout]">
       <router-link v-if="isMobile || layout === 'head'" to="/" :class="['logo', isMobile ? null : 'pc', theme]">
-        <img width="32" src="static/img/logo.png"  alt=""/>
+<!--        <img width="32" src="static/img/logo.png"  alt=""/>-->
         <h1 v-if="!isMobile">{{systemName}}</h1>
       </router-link>
       <a-divider v-if="isMobile" type="vertical" />

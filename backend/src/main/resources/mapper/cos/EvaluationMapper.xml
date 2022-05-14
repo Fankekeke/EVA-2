@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.cos.dao.EvaluationMapper">
+
+    <!-- 分页查询评价信息 -->
+    <select id="evaluationByPage" resultType="java.util.LinkedHashMap">
+        SELECT
+        eva.id,
+        eva.score,
+        eva.content,
+        eva.create_date AS createDate,
+        oi.code,
+        oi.price,
+        oi.day_num AS dayNum,
+        ui.name AS userName,
+        ui.avatar,
+        rt.name,
+        hi.name AS hotelName
+        FROM
+        evaluation eva
+        LEFT JOIN order_info oi ON (oi.id = eva.order_id)
+        LEFT JOIN user_info ui ON ( ui.id = oi.user_id )
+        LEFT JOIN room_type rt ON ( rt.id = oi.type_id )
+        LEFT JOIN hotel_info hi ON ( hi.id = oi.hotel_id )
+        WHERE
+        1 = 1
+        <if test="evaluation.code != null and evaluation.code != ''">
+            AND oi.code LIKE CONCAT('%',#{evaluation.code},'%')
+        </if>
+        <if test="evaluation.userName != null and evaluation.userName != ''">
+            AND ui.name LIKE CONCAT('%',#{evaluation.userName},'%')
+        </if>
+        <if test="evaluation.userId != null">
+            AND hi.user_id LIKE CONCAT('%',#{evaluation.userId},'%')
+        </if>
+        <if test="evaluation.hotelName != null and evaluation.hotelName != ''">
+            AND hi.name LIKE CONCAT('%',#{evaluation.hotelName},'%')
+        </if>
+        <if test="evaluation.roomName != null and evaluation.roomName != ''">
+            AND rt.name LIKE CONCAT('%',#{evaluation.roomName},'%')
+        </if>
+    </select>
+
+    <!-- 获取房间评价 -->
+    <select id="getEvaluationByRoomType" resultType="java.util.LinkedHashMap">
+        SELECT
+        eva.content,
+        eva.create_date,
+        ui.avatar,
+        ui.name
+        FROM
+        evaluation eva
+        LEFT JOIN order_info oi ON ( oi.id = eva.order_id )
+        LEFT JOIN user_info ui ON ( ui.id = eva.user_id )
+        WHERE
+        oi.type_id = #{ roomTypeId }
+    </select>
+</mapper>

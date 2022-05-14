@@ -11,7 +11,7 @@
         ri.content,
         ri.create_date AS createDate,
         ui.avatar,
-        ui.user_name AS userName,
+        ui.name AS userName,
         pi.title
         FROM
         reply_info ri
@@ -20,7 +20,7 @@
         WHERE
         1 = 1
         <if test="replyInfo.userName != null and replyInfo.userName != ''">
-            AND ui.user_name LIKE CONCAT('%',#{replyInfo.userName},'%')
+            AND ui.name LIKE CONCAT('%',#{replyInfo.userName},'%')
         </if>
         <if test="replyInfo.title != null and replyInfo.title != ''">
             AND pi.title LIKE CONCAT('%',#{replyInfo.title},'%')

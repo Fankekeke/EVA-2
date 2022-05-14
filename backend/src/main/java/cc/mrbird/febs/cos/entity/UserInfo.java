@@ -44,9 +44,18 @@ public class UserInfo implements Serializable {
     private String phone;
 
     /**
+     * 头像
+     */
+    private String avatar;
+
+    /**
      * 所属用户
      */
     private Long userId;
 
+    /**
+     * 创建时间
+     */
+    private String createDate;
 
 }

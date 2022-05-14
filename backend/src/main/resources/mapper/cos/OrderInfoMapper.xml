@@ -13,7 +13,7 @@
         oi.end_date AS endDate,
         oi.order_status AS orderStatus,
         oi.create_date AS createDate,
-        ui.user_name AS userName,
+        ui.name AS userName,
         ui.avatar,
         rt.name,
         rt.images,
@@ -40,7 +40,7 @@
             AND oi.order_status = #{orderInfo.orderStatus}
         </if>
         <if test="orderInfo.userName != null and orderInfo.userName != ''">
-            AND ui.user_name LIKE CONCAT('%',#{orderInfo.userName},'%')
+            AND ui.name LIKE CONCAT('%',#{orderInfo.userName},'%')
         </if>
         <if test="orderInfo.userId != null">
             AND hi.user_id LIKE CONCAT('%',#{orderInfo.userId},'%')

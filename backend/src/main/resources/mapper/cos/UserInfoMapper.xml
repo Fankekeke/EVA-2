@@ -2,4 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cc.mrbird.febs.cos.dao.UserInfoMapper">
 
+    <!-- 分页查询用户信息 -->
+    <select id="userInfoByPage" resultType="java.util.LinkedHashMap">
+        SELECT
+        ui.id,
+        ui.code,
+        ui.name,
+        ui.email,
+        ui.phone,
+        ui.avatar,
+        ui.user_id AS userId,
+        ui.create_date AS createDate,
+        tu.`STATUS` AS status
+        FROM
+        user_info ui
+        LEFT JOIN t_user tu ON ( tu.USER_ID = ui.user_id )
+        WHERE
+        1 = 1
+        <if test="userInfo.name != null and userInfo.name != ''">
+            AND ui.name LIKE CONCAT('%',#{userInfo.name},'%')
+        </if>
+        <if test="userInfo.code != null and userInfo.code != ''">
+            AND ui.code LIKE CONCAT('%',#{userInfo.code},'%')
+        </if>
+        <if test="userInfo.email != null and userInfo.email != ''">
+            AND ui.email LIKE CONCAT('%',#{userInfo.email},'%')
+        </if>
+        ORDER BY
+        ui.create_date
+    </select>
 </mapper>

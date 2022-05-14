@@ -3,6 +3,7 @@ package cc.mrbird.febs.cos.service.impl;
 import cc.mrbird.febs.cos.entity.HotelInfo;
 import cc.mrbird.febs.cos.entity.OrderInfo;
 import cc.mrbird.febs.cos.dao.OrderInfoMapper;
+import cc.mrbird.febs.cos.entity.ScenicInfo;
 import cc.mrbird.febs.cos.service.IHotelInfoService;
 import cc.mrbird.febs.cos.service.IOrderInfoService;
 import cc.mrbird.febs.cos.service.IScenicInfoService;
@@ -42,7 +43,7 @@ public class OrderInfoServiceImpl extends ServiceImpl<OrderInfoMapper, OrderInfo
             result.put("orderNum", baseMapper.orderNumByHotelId(hotelInfo.getId()));
             result.put("orderTypeByHotelId", baseMapper.orderTypeByHotelId(hotelInfo.getId()));
         } else {
-            result.put("scenic", scenicInfoService.list());
+            result.put("scenic", scenicInfoService.list(Wrappers.<ScenicInfo>lambdaQuery().last("LIMIT 100")));
             result.put("hotel", hotelInfoService.list());
         }
         return result;

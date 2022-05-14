@@ -5,6 +5,8 @@ import cc.mrbird.febs.common.domain.QueryRequest;
 import cc.mrbird.febs.common.service.CacheService;
 import cc.mrbird.febs.common.utils.SortUtil;
 import cc.mrbird.febs.common.utils.MD5Util;
+import cc.mrbird.febs.cos.entity.HotelInfo;
+import cc.mrbird.febs.cos.service.IHotelInfoService;
 import cc.mrbird.febs.system.dao.UserMapper;
 import cc.mrbird.febs.system.dao.UserRoleMapper;
 import cc.mrbird.febs.system.domain.User;
@@ -13,6 +15,7 @@ import cc.mrbird.febs.system.manager.UserManager;
 import cc.mrbird.febs.system.service.UserConfigService;
 import cc.mrbird.febs.system.service.UserRoleService;
 import cc.mrbird.febs.system.service.UserService;
+import cn.hutool.core.date.DateUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
@@ -43,6 +46,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private UserRoleService userRoleService;
     @Autowired
     private UserManager userManager;
+    @Autowired
+    private IHotelInfoService hotelInfoService;
 
 
     @Override
@@ -162,7 +167,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     @Transactional
-    public void regist(String username, String password) throws Exception {
+    public void regist(String username, String password, String hotelName) throws Exception {
         User user = new User();
         user.setPassword(MD5Util.encrypt(username, password));
         user.setUsername(username);
@@ -173,9 +178,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         user.setDescription("注册用户");
         this.save(user);
 
+        HotelInfo hotelInfo = new HotelInfo();
+        hotelInfo.setUserId(user.getUserId());
+        hotelInfo.setName(hotelName);
+        hotelInfo.setCreateDate(DateUtil.formatDateTime(new Date()));
+        hotelInfoService.save(hotelInfo);
+
         UserRole ur = new UserRole();
         ur.setUserId(user.getUserId());
-        ur.setRoleId(2L); // 注册用户角色 ID
+        ur.setRoleId(75L); // 注册用户角色 ID
         this.userRoleMapper.insert(ur);
 
         // 创建用户默认的个性化配置

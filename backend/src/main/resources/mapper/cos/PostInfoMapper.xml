@@ -10,7 +10,7 @@
         pi.user_id AS userId,
         pi.images,
         pi.create_date AS createDate,
-        ui.user_name AS userName,
+        ui.name AS userName,
         ui.avatar
         FROM
         post_info pi
@@ -18,7 +18,7 @@
         WHERE
         1 = 1
         <if test="postInfo.userName != null and postInfo.userName != ''">
-            AND ui.user_name LIKE CONCAT('%',#{postInfo.userName},'%')
+            AND ui.name LIKE CONCAT('%',#{postInfo.userName},'%')
         </if>
         <if test="postInfo.title != null and postInfo.title != ''">
             AND pi.title LIKE CONCAT('%',#{postInfo.title},'%')
@@ -36,7 +36,7 @@
         ri.user_id AS userId,
         ri.content,
         ri.create_date AS createDate,
-        ui.user_name AS userName,
+        ui.name AS userName,
         ui.avatar
         FROM
         reply_info ri
@@ -56,7 +56,7 @@
         pi.content,
         pi.images,
         pi.create_date AS createDate,
-        ui.user_name AS userName,
+        ui.name AS userName,
         ui.avatar,
         COUNT(ri.post_id) replyNum
         FROM
@@ -76,7 +76,7 @@
         pi.content,
         pi.images,
         pi.create_date AS createDate,
-        ui.user_name AS userName,
+        ui.name AS userName,
         ui.avatar
         FROM
         post_info pi
@@ -93,7 +93,7 @@
         pi.content,
         pi.images,
         pi.create_date AS createDate,
-        ui.user_name AS userName,
+        ui.name AS userName,
         ui.avatar
         FROM
         post_info pi

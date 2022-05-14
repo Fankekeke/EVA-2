@@ -7,7 +7,7 @@
     :trigger="null">
     <div :class="['logo', theme]">
       <router-link to="/">
-        <img src="static/img/logo.png" alt="">
+<!--        <img src="static/img/logo.png" alt="">-->
         <h1 class="animated fadeIn">{{systemName}}</h1>
       </router-link>
     </div>

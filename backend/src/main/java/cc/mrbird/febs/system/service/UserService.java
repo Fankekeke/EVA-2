@@ -82,7 +82,7 @@ public interface UserService extends IService<User> {
      * @param username 用户名
      * @param password 密码
      */
-    void regist(String username, String password) throws Exception;
+    void regist(String username, String password, String hotelName) throws Exception;
 
     /**
      * 重置密码
