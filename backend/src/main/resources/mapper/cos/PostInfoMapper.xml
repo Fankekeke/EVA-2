@@ -26,6 +26,9 @@
         <if test="postInfo.content != null and postInfo.content != ''">
             AND pi.content LIKE CONCAT('%',#{postInfo.content},'%')
         </if>
+        <if test="postInfo.userId != null and postInfo.userId != ''">
+            AND pi.user_id = #{postInfo.userId}
+        </if>
         ORDER BY pi.create_date
     </select>
 

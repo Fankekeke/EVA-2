@@ -8,6 +8,7 @@
         so.id,
         so.code,
         so.price,
+        so.amount,
         so.order_status AS orderStatus,
         so.create_date AS createDate,
         so.update_date AS updateDate,
@@ -33,6 +34,7 @@
         LEFT JOIN user_info ui ON ( ui.id = so.user_id )
         WHERE
         1 = 1
+        AND so.del_flag = 0
         <if test="scenicOrder.userName != null and scenicOrder.userName != ''">
             AND ui.name LIKE CONCAT('%',#{scenicOrder.userName},'%')
         </if>
@@ -44,6 +46,9 @@
         </if>
         <if test="scenicOrder.orderStatus != null">
             AND so.order_status = #{scenicOrder.orderStatus}
+        </if>
+        <if test="scenicOrder.userId != null">
+            AND ui.id = #{scenicOrder.userId}
         </if>
         ORDER BY so.create_date DESC
     </select>

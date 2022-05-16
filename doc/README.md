@@ -15,3 +15,17 @@ WebStorm OR VScode 编译器 [https://www.jianshu.com/p/d63b5bae9dff]
 # 安装所需文件 yarn install 
 # 运行 yarn run dev
 
+## 沙盒买家账号 guhmjp6530@sandbox.com 111111 111111
+
+## 默认后台账户密码
+[管理员]
+admin
+1234qwer
+
+[民宿管理员]
+xierdun
+1234qwer
+
+[用户]
+test
+1234qwer

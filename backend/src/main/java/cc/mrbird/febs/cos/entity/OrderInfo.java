@@ -72,6 +72,8 @@ public class OrderInfo implements Serializable {
      */
     private Integer orderStatus;
 
+    private Integer delFlag;
+
     /**
      * 下单时间
      */

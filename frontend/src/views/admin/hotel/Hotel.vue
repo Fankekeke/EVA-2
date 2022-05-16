@@ -52,6 +52,16 @@
                :rowSelection="{selectedRowKeys: selectedRowKeys, onChange: onSelectChange}"
                :scroll="{ x: 900 }"
                @change="handleTableChange">
+        <template slot="nameShow" slot-scope="text, record">
+          <template>
+            <a-tooltip>
+              <template slot="title">
+                {{ record.name }}
+              </template>
+              {{ record.name !== null ? (record.name.slice(0, 10)+'...') : '- -' }}
+            </a-tooltip>
+          </template>
+        </template>
         <template slot="tagShow" slot-scope="text, record">
           <template>
             {{ record.tag !== null ? record.tag : '- -' }}
@@ -63,7 +73,7 @@
               <template slot="title">
                 {{ record.address }}
               </template>
-              {{ record.address !== null ? (record.address.slice(0, 15)+'...') : '- -' }}
+              {{ record.address !== null ? (record.address.slice(0, 10)+'...') : '- -' }}
             </a-tooltip>
           </template>
         </template>
@@ -73,7 +83,7 @@
               <template slot="title">
                 {{ record.content }}
               </template>
-              {{ record.content !== null ? (record.content.slice(0, 20)+'...') : '- -' }}
+              {{ record.content !== null ? (record.content.slice(0, 15)+'...') : '- -' }}
             </a-tooltip>
           </template>
         </template>
@@ -134,7 +144,8 @@ export default {
     columns () {
       return [{
         title: '民宿名称',
-        dataIndex: 'name'
+        dataIndex: 'name',
+        scopedSlots: { customRender: 'nameShow' }
       }, {
         title: '标签',
         dataIndex: 'tag',

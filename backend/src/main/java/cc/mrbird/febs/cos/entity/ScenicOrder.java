@@ -37,6 +37,11 @@ public class ScenicOrder implements Serializable {
     private BigDecimal price;
 
     /**
+     * 数量
+     */
+    private Integer amount;
+
+    /**
      * 景区ID
      */
     private Integer scenicId;
@@ -60,6 +65,11 @@ public class ScenicOrder implements Serializable {
      * 销票时间
      */
     private String updateDate;
+
+    /**
+     * 标识
+     */
+    private Integer delFlag;
 
     @TableField(exist = false)
     private String userName;

@@ -27,7 +27,7 @@
           </a-button>
         </a-form-item>
         <div>
-          <a style="float: right" @click="regist">用户注册</a>
+          <a style="float: right" @click="regist">民宿注册</a>
         </div>
       </a-form>
     </div>

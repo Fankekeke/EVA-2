@@ -33,6 +33,7 @@
         LEFT JOIN hotel_info hi ON ( hi.id = oi.hotel_id )
         WHERE
         1 = 1
+        AND oi.del_flag = 0
         <if test="orderInfo.code != null and orderInfo.code != ''">
             AND oi.code LIKE CONCAT('%',#{orderInfo.code},'%')
         </if>

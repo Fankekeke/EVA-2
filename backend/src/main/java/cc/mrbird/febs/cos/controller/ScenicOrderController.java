@@ -3,8 +3,11 @@ package cc.mrbird.febs.cos.controller;
 
 import cc.mrbird.febs.common.utils.R;
 import cc.mrbird.febs.cos.entity.ScenicOrder;
+import cc.mrbird.febs.cos.entity.UserInfo;
 import cc.mrbird.febs.cos.service.IScenicInfoService;
 import cc.mrbird.febs.cos.service.IScenicOrderService;
+import cc.mrbird.febs.cos.service.IUserInfoService;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,8 @@ public class ScenicOrderController {
 
     private final IScenicOrderService scenicOrderService;
 
+    private final IUserInfoService userInfoService;
+
     /**
      * 分页查询景点订单
      * @param page
@@ -30,6 +35,10 @@ public class ScenicOrderController {
      */
     @GetMapping("/page")
     public R page(Page page, ScenicOrder scenicOrder) {
+        if (scenicOrder.getUserId() != null) {
+            UserInfo userInfo = userInfoService.getOne(Wrappers.<UserInfo>lambdaQuery().eq(UserInfo::getUserId, scenicOrder.getUserId()));
+            scenicOrder.setUserId(userInfo.getId());
+        }
         return R.ok(scenicOrderService.scenicInfoByPage(page, scenicOrder));
     }
 
