@@ -28,7 +28,7 @@ public class Evaluation implements Serializable {
     /**
      * 用户ID
      */
-    private Long userId;
+    private Integer userId;
 
     /**
      * 评分

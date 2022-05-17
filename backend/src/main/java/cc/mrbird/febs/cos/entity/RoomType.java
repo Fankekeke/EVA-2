@@ -74,4 +74,7 @@ public class RoomType implements Serializable {
 
     @TableField(exist = false)
     private Integer num;
+
+    @TableField(exist = false)
+    private String address;
 }

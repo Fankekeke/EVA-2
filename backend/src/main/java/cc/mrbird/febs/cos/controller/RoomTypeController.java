@@ -53,6 +53,16 @@ public class RoomTypeController {
     }
 
     /**
+     * 查询当前房间余量
+     * @param roomId
+     * @return
+     */
+    @GetMapping("/{roomId}")
+    public R roomNum(@PathVariable("roomId") Integer roomId) {
+        return R.ok(roomTypeService.roomNum(roomId));
+    }
+
+    /**
      * 修改房间类型
      * @param roomType
      * @return

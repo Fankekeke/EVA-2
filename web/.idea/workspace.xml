@@ -20,32 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50b5d95b-ffea-46f9-bc09-0de9293f6d90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/home/hotel/Hotel.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/hotel/OrderAdd.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/post/Post.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/BulletinInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/BulletinInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/OrderInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/OrderInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PayController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PostInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PostInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ReplyInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ReplyInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ScenicOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ScenicOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/config/alipay.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/config/alipay.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/OrderInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/BulletinInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/BulletinInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/OrderInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/OrderInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/PostInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/PostInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ReplyInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ReplyInfoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ScenicOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ScenicOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../doc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/post/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/post/Post.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/post/PostView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/post/PostView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/scenic_order/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/scenic_order/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/manage/order/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/manage/order/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/order/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/order/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/post/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/post/Post.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/post/PostView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/post/PostView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user/user/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/user/User.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/EvaluationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/EvaluationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/RoomTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/RoomTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/Evaluation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/Evaluation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/RoomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/RoomTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/RoomTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/RoomTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/RoomTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/entity/RoomType.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/entity/RoomType.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

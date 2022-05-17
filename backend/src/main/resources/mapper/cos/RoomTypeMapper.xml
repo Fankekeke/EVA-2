@@ -14,6 +14,7 @@
         rt.hotel_id AS hotelId,
         rt.content,
         rt.create_date AS createDate,
+        hi.id AS hotelId,
         hi.name AS hotelName,
         hi.address,
         hi.tag,
@@ -37,6 +38,9 @@
         </if>
         <if test="roomType.userId != null">
             AND hi.user_id = #{roomType.userId}
+        </if>
+        <if test="roomType.address != null and roomType.address != ''">
+            AND hi.address LIKE CONCAT('%',#{roomType.address},'%')
         </if>
     </select>
 
