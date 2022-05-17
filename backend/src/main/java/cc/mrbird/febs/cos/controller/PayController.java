@@ -84,6 +84,33 @@ public class PayController {
     }
 
     /**
+     * 房间订单支付
+     * @param orderInfo
+     * @return
+     * @throws AlipayApiException
+     */
+    @PostMapping("/room")
+    public R roomAlipay(OrderInfo orderInfo) throws AlipayApiException {
+        UserInfo userInfo = userInfoService.getOne(Wrappers.<UserInfo>lambdaQuery().eq(UserInfo::getUserId, orderInfo.getUserId()));
+        orderInfo.setUserId(userInfo.getId());
+        orderInfo.setCode("ORD-" + System.currentTimeMillis());
+        orderInfo.setOrderStatus(1);
+        orderInfo.setCreateDate(DateUtil.formatDateTime(new Date()));
+        orderInfo.setDelFlag(1);
+        orderInfo.setStartDate(DateUtil.formatDate(new Date()));
+        orderInfo.setEndDate(DateUtil.formatDate(DateUtil.offsetDay(new Date(), 3)));
+        orderInfoService.save(orderInfo);
+        // 支付
+        AlipayBean alipayBean = new AlipayBean();
+        alipayBean.setOut_trade_no(orderInfo.getCode());
+        alipayBean.setSubject("房间价格");
+        alipayBean.setTotal_amount(orderInfo.getPrice().toString());
+        alipayBean.setBody("房间价格");
+        String result = payService.aliPay(alipayBean);
+        return R.ok(result);
+    }
+
+    /**
      * 阿里支付
      * @param subject
      * @param body

@@ -17,6 +17,21 @@ WebStorm OR VScode 编译器 [https://www.jianshu.com/p/d63b5bae9dff]
 
 ## 沙盒买家账号 guhmjp6530@sandbox.com 111111 111111
 
+[![OIVagf.png](https://s1.ax1x.com/2022/05/17/OIVagf.png)](https://imgtu.com/i/OIVagf)
+[![OIVBDg.png](https://s1.ax1x.com/2022/05/17/OIVBDg.png)](https://imgtu.com/i/OIVBDg)
+[![OIVDbQ.png](https://s1.ax1x.com/2022/05/17/OIVDbQ.png)](https://imgtu.com/i/OIVDbQ)
+[![OIV0KS.png](https://s1.ax1x.com/2022/05/17/OIV0KS.png)](https://imgtu.com/i/OIV0KS)
+[![OIVdv8.png](https://s1.ax1x.com/2022/05/17/OIVdv8.png)](https://imgtu.com/i/OIVdv8)
+[![OIVgCq.png](https://s1.ax1x.com/2022/05/17/OIVgCq.png)](https://imgtu.com/i/OIVgCq)
+[![OIV5b4.png](https://s1.ax1x.com/2022/05/17/OIV5b4.png)](https://imgtu.com/i/OIV5b4)
+[![OIVsEj.png](https://s1.ax1x.com/2022/05/17/OIVsEj.png)](https://imgtu.com/i/OIVsEj)
+[![OIVyUs.png](https://s1.ax1x.com/2022/05/17/OIVyUs.png)](https://imgtu.com/i/OIVyUs)
+[![OIV65n.png](https://s1.ax1x.com/2022/05/17/OIV65n.png)](https://imgtu.com/i/OIV65n)
+[![OIV280.png](https://s1.ax1x.com/2022/05/17/OIV280.png)](https://imgtu.com/i/OIV280)
+[![OIVhKU.png](https://s1.ax1x.com/2022/05/17/OIVhKU.png)](https://imgtu.com/i/OIVhKU)
+[![OIVR2V.png](https://s1.ax1x.com/2022/05/17/OIVR2V.png)](https://imgtu.com/i/OIVR2V)
+[![OIV4rF.png](https://s1.ax1x.com/2022/05/17/OIV4rF.png)](https://imgtu.com/i/OIV4rF)
+
 ## 默认后台账户密码
 [管理员]
 admin
@@ -29,3 +44,8 @@ xierdun
 [用户]
 test
 1234qwer
+
+## 系统功能
+民宿管理员：订单数量统计，订单交易额统计，客房统计饼图，酒店信息修改，房间订单查询，房间入住状态修改，查看住宿订单详情，酒店房间管理，查看用户房间订单评价
+超级管理员：景点民宿导航，公告管理，订单评价，民宿管理，民宿订单，论坛管理，消息回复，房间信息，景点管理，用户管理，景区订单
+用户：邮箱注册，修改个人信息，订单支付，我的贴子，订单评价，发帖回复，修改密码

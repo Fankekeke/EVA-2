@@ -13,6 +13,7 @@
         oi.end_date AS endDate,
         oi.order_status AS orderStatus,
         oi.create_date AS createDate,
+        ui.id AS userId,
         ui.name AS userName,
         ui.avatar,
         rt.name,
@@ -25,12 +26,14 @@
         hi.content,
         hi.point,
         hi.policy,
-        hi.check_in AS checkIn
+        hi.check_in AS checkIn,
+        eva.id AS flag
         FROM
         order_info oi
         LEFT JOIN user_info ui ON ( ui.id = oi.user_id )
         LEFT JOIN room_type rt ON ( rt.id = oi.type_id )
         LEFT JOIN hotel_info hi ON ( hi.id = oi.hotel_id )
+        LEFT JOIN evaluation eva On (eva.order_id = oi.id)
         WHERE
         1 = 1
         AND oi.del_flag = 0
@@ -44,7 +47,10 @@
             AND ui.name LIKE CONCAT('%',#{orderInfo.userName},'%')
         </if>
         <if test="orderInfo.userId != null">
-            AND hi.user_id LIKE CONCAT('%',#{orderInfo.userId},'%')
+            AND oi.user_id = #{orderInfo.userId}
+        </if>
+        <if test="orderInfo.hotelId != null">
+            AND hi.user_id = #{orderInfo.hotelId}
         </if>
         <if test="orderInfo.hotelName != null and orderInfo.hotelName != ''">
             AND hi.name LIKE CONCAT('%',#{orderInfo.hotelName},'%')

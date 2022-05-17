@@ -43,6 +43,16 @@ public class ScenicOrderController {
     }
 
     /**
+     * 订单销票
+     * @param orderId
+     * @return
+     */
+    @GetMapping("/editStatus")
+    public R editStatus(Integer orderId) {
+        return R.ok(scenicOrderService.update(Wrappers.<ScenicOrder>lambdaUpdate().set(ScenicOrder::getOrderStatus, 2).eq(ScenicOrder::getId, orderId)));
+    }
+
+    /**
      * 添加景区订单
      * @param scenicOrder
      * @return

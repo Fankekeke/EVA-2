@@ -61,7 +61,7 @@
             :data-source="replyList"
           >
             <a-list-item slot="renderItem" slot-scope="item, index">
-              <a-comment :author="item.author" :avatar="item.avatar">
+              <a-comment :author="item.author" :avatar="'http://127.0.0.1:9527/imagesWeb/' + item.avatar">
                 <template slot="actions">
                   <span v-for="(action, index) in item.actions" :key="index">{{ action }}</span>
                 </template>

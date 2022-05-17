@@ -37,6 +37,15 @@ public class BulletinInfoController {
     }
 
     /**
+     * 获取公告信息
+     * @return
+     */
+    @GetMapping("/list")
+    public R list() {
+        return R.ok(bulletinInfoService.list());
+    }
+
+    /**
      * 新增公告信息
      * @param bulletinInfo
      * @return

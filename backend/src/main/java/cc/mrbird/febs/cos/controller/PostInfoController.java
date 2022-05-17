@@ -55,6 +55,25 @@ public class PostInfoController {
     }
 
     /**
+     * 获取详情
+     * @param postId
+     * @return
+     */
+    @GetMapping("/{postId}")
+    public R detail(@PathVariable("postId") Integer postId) {
+        return R.ok(postInfoService.getPostInfoById(postId));
+    }
+
+    /**
+     * 查询帖子信息
+     * @return
+     */
+    @GetMapping("/list")
+    public R list() {
+        return R.ok(postInfoService.list());
+    }
+
+    /**
      * 新增帖子信息
      * @param postInfo
      * @return

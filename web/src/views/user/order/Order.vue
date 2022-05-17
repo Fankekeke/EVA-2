@@ -69,6 +69,7 @@
           </template>
         </template>
         <template slot="operation" slot-scope="text, record">
+          <a-icon type="message" v-if="record.flag == null" @click="evaluation(record)" title="评 价" style="margin-right: 15px"></a-icon>
           <a-icon type="cloud" theme="twoTone" twoToneColor="#4a9ff5" @click="view(record)" title="查 看"></a-icon>
         </template>
       </a-table>
@@ -78,6 +79,22 @@
       :orderShow="orderView.visiable"
       :orderData="orderView.data">
     </order-view>
+    <a-modal v-model="visible" title="订单评价" @ok="handleOk">
+      <a-form layout="vertical">
+        <a-row :gutter="20">
+          <a-col :span="12">
+            <a-form-item label='评分' v-bind="formItemLayout">
+              <a-rate v-model="rateValue" />
+            </a-form-item>
+          </a-col>
+          <a-col :span="24">
+            <a-form-item label='评价内容' v-bind="formItemLayout">
+              <a-textarea :rows="6" v-model="content"/>
+            </a-form-item>
+          </a-col>
+        </a-row>
+      </a-form>
+    </a-modal>
   </a-card>
 </template>
 
@@ -87,12 +104,19 @@ import OrderView from './OrderView'
 import {mapState} from 'vuex'
 import moment from 'moment'
 moment.locale('zh-cn')
-
+const formItemLayout = {
+  labelCol: { span: 24 },
+  wrapperCol: { span: 24 }
+}
 export default {
   name: 'order',
   components: {OrderView, RangeDate},
   data () {
     return {
+      rateValue: 3,
+      content: '',
+      formItemLayout,
+      visible: false,
       advanced: false,
       orderView: {
         visiable: false,
@@ -113,7 +137,7 @@ export default {
         showSizeChanger: true,
         showTotal: (total, range) => `显示 ${range[0]} ~ ${range[1]} 条记录，共 ${total} 条记录`
       },
-      userList: []
+      orderInfo: []
     }
   },
   computed: {
@@ -198,6 +222,20 @@ export default {
     this.fetch()
   },
   methods: {
+    evaluation (row) {
+      this.rateValue = 3
+      this.content = ''
+      this.visible = true
+      this.orderInfo = row
+    },
+    handleOk () {
+      let data = {userId: this.orderInfo.userId, score: this.rateValue, content: this.content, orderId: this.orderInfo.id}
+      this.$post(`/cos/evaluation`, data).then((r) => {
+        this.visible = false
+        this.$message.success('评价成功！')
+        this.fetch()
+      })
+    },
     view (row) {
       this.orderView.data = row
       this.orderView.visiable = true

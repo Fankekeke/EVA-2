@@ -20,82 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50b5d95b-ffea-46f9-bc09-0de9293f6d90" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__com_alipay_sdk_alipay_sdk_java_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/common/config/AlipayConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/common/utils/Alipay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/AlipayBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/service/IMailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/service/PayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/service/impl/IMailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/service/impl/PayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/resources/config/alipay.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/resources/templates/email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../backend/src/main/resources/templates/registerEmail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/.idea/frontend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/map/baiduMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/map/gisMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/map/searchmap/drawerMap.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/map/searchmap/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/urlKey.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/scenic/OrderAdd.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/scenic/Scenic.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/home/scenic/ScenicView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/order/Order.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/order/OrderView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/post/Post.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/post/PostAdd.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/post/PostEdit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/post/PostView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/sence_order/Order.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/sence_order/OrderView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/user/user/User.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/FEBS_FanK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/FEBS_FanK.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/home/hotel/Hotel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/home/hotel/OrderAdd.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/home/post/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/BulletinInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/BulletinInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/OrderInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/OrderInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PayController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PayController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PostInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/PostInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ReplyInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ReplyInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ScenicOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/ScenicOrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/controller/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/OrderInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/OrderInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/ScenicOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/cos/entity/ScenicOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/system/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/system/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/system/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/system/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/cc/mrbird/febs/system/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/config/alipay.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/config/alipay.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/OrderInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/OrderInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/PostInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/PostInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/ScenicOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/resources/mapper/cos/ScenicOrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/BulletinInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/BulletinInfoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/OrderInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/OrderInfoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/PostInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/PostInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ReplyInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ReplyInfoController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ScenicOrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/controller/ScenicOrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/entity/OrderInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/entity/OrderInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/entity/ScenicOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/cos/entity/ScenicOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/system/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/system/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/system/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/system/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/system/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/target/classes/cc/mrbird/febs/system/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../doc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/hotel/Hotel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/hotel/Hotel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/scenic_order/OrderView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/scenic_order/OrderView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/common/HeaderAvatar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/common/HeaderAvatar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/views/login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/login/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/post/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/post/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/post/PostView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/post/PostView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/admin/scenic_order/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/admin/scenic_order/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/views/manage/order/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/views/manage/order/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/user/order/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/order/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/user/post/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/post/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/user/post/PostView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/post/PostView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/user/user/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user/user/User.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +76,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/user/order" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/views/home/hotel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -135,11 +85,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\景区系统\web\src\views\home\hotel" />
       <recent name="E:\Project\景区系统\web\src\views\user\order" />
       <recent name="E:\Project\景区系统\web\src\views\user\sorder" />
       <recent name="E:\Project\景区系统\web\src\views\user\post" />
       <recent name="E:\Project\景区系统\web\src\utils" />
-      <recent name="E:\Project\景区系统\web\src\views\home\scenic" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -152,6 +102,7 @@
       <updated>1652577055537</updated>
       <workItem from="1652577056610" duration="20789000" />
       <workItem from="1652656617473" duration="14152000" />
+      <workItem from="1652743380610" duration="13159000" />
     </task>
     <servers />
   </component>
@@ -171,9 +122,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="661" y="257" width="598" height="536" key="find.popup" timestamp="1652710504283">
+    <state x="661" y="257" width="598" height="536" key="find.popup" timestamp="1652796209257">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="661" y="257" width="598" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1652710504283" />
+    <state x="661" y="257" width="598" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1652796209257" />
   </component>
 </project>

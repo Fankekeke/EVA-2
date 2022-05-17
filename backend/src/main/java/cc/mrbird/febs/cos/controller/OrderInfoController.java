@@ -55,7 +55,9 @@ public class OrderInfoController {
     public R page(Page page, OrderInfo orderInfo) {
         if (orderInfo.getUserId() != null) {
             UserInfo userInfo = userInfoService.getOne(Wrappers.<UserInfo>lambdaQuery().eq(UserInfo::getUserId, orderInfo.getUserId()));
-            orderInfo.setUserId(userInfo.getId());
+            if (userInfo != null) {
+                orderInfo.setUserId(userInfo.getId());
+            }
         }
         return R.ok(orderInfoService.orderInfoByPage(page, orderInfo));
     }

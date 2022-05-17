@@ -85,6 +85,7 @@
           </template>
         </template>
         <template slot="operation" slot-scope="text, record">
+          <a-icon v-if="record.orderStatus == 1" type="rollback" twoToneColor="#4a9ff5" @click="edit(record)" title="修 改" style="margin-right: 15px"></a-icon>
           <a-icon type="cloud" theme="twoTone" twoToneColor="#4a9ff5" @click="view(record)" title="查 看"></a-icon>
         </template>
       </a-table>
@@ -210,6 +211,12 @@ export default {
     this.fetch()
   },
   methods: {
+    edit (row) {
+      this.$get('/cos/scenic-order/editStatus', {orderId: row.id}).then((r) => {
+        this.$message.success('订单销票成功😀')
+        this.fetch()
+      })
+    },
     view (row) {
       this.orderView.data = row
       this.orderView.visiable = true

@@ -324,7 +324,7 @@ export default {
       if (params.orderStatus === undefined) {
         delete params.orderStatus
       }
-      params.userId = this.currentUser.userId
+      params.hotelId = this.currentUser.userId
       this.$get('/cos/order-info/page', {
         ...params
       }).then((r) => {
