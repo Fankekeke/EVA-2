@@ -9,38 +9,53 @@
 2.  价格私聊，可充当毕设
 
 
-
 #### 项目截图
 
-[![gN4yi8.png](https://z3.ax1x.com/2021/05/10/gN4yi8.png)](https://imgtu.com/i/gN4yi8)
+|  |  |
+|---------------------|---------------------|
+|[![OIVagf.png](https://s1.ax1x.com/2022/05/17/OIVagf.png)](https://imgtu.com/i/OIVagf) |
+|[![OIVBDg.png](https://s1.ax1x.com/2022/05/17/OIVBDg.png)](https://imgtu.com/i/OIVBDg) |
+| [![OIVDbQ.png](https://s1.ax1x.com/2022/05/17/OIVDbQ.png)](https://imgtu.com/i/OIVDbQ) |
+| [![OIV0KS.png](https://s1.ax1x.com/2022/05/17/OIV0KS.png)](https://imgtu.com/i/OIV0KS) |
+| [![OIVdv8.png](https://s1.ax1x.com/2022/05/17/OIVdv8.png)](https://imgtu.com/i/OIVdv8) |
+| [![OIVgCq.png](https://s1.ax1x.com/2022/05/17/OIVgCq.png)](https://imgtu.com/i/OIVgCq) |
+| [![OIV5b4.png](https://s1.ax1x.com/2022/05/17/OIV5b4.png)](https://imgtu.com/i/OIV5b4) |
+| [![OIVsEj.png](https://s1.ax1x.com/2022/05/17/OIVsEj.png)](https://imgtu.com/i/OIVsEj) |
+| [![OIVyUs.png](https://s1.ax1x.com/2022/05/17/OIVyUs.png)](https://imgtu.com/i/OIVyUs) |
+| [![OIV65n.png](https://s1.ax1x.com/2022/05/17/OIV65n.png)](https://imgtu.com/i/OIV65n) |
+| [![OIV280.png](https://s1.ax1x.com/2022/05/17/OIV280.png)](https://imgtu.com/i/OIV280) |
+| [![OIVhKU.png](https://s1.ax1x.com/2022/05/17/OIVhKU.png)](https://imgtu.com/i/OIVhKU) |
+| [![OIVR2V.png](https://s1.ax1x.com/2022/05/17/OIVR2V.png)](https://imgtu.com/i/OIVR2V) |
+| [![OIV4rF.png](https://s1.ax1x.com/2022/05/17/OIV4rF.png)](https://imgtu.com/i/OIV4rF) |
 
-[![gN44Zq.png](https://z3.ax1x.com/2021/05/10/gN44Zq.png)](https://imgtu.com/i/gN44Zq)
+#### 本地地址：http://localhost:8081/、http://localhost:8082/ （取决于node分配端口）
 
-[![gN4cRg.png](https://z3.ax1x.com/2021/05/10/gN4cRg.png)](https://imgtu.com/i/gN4cRg)
 
-[![gN4gzQ.png](https://z3.ax1x.com/2021/05/10/gN4gzQ.png)](https://imgtu.com/i/gN4gzQ)
+#### 安装环境
+JAVA 环境 
+Node.js环境 [https://nodejs.org/en/] 选择14.17
+Yarn 打开cmd， 输入npm install -g yarn !!!必须安装完毕nodejs
+Mysql 数据库 [https://blog.csdn.net/qq_40303031/article/details/88935262] 一定要把账户和密码记住
+redis
+Idea 编译器 [https://blog.csdn.net/weixin_44505194/article/details/104452880]
+WebStorm OR VScode 编译器 [https://www.jianshu.com/p/d63b5bae9dff]
 
-[![gN46JS.png](https://z3.ax1x.com/2021/05/10/gN46JS.png)](https://imgtu.com/i/gN46JS)
+#### 前台启动方式
+安装所需文件 yarn install 
+运行 yarn run dev
 
-[![gN4fLn.png](https://z3.ax1x.com/2021/05/10/gN4fLn.png)](https://imgtu.com/i/gN4fLn)
+#### 默认后台账户密码
+[管理员]
+admin
+1234qwer
 
-[![gN4RMj.png](https://z3.ax1x.com/2021/05/10/gN4RMj.png)](https://imgtu.com/i/gN4RMj)
+[民宿管理员]
+xierdun
+1234qwer
 
-[![gN4Wss.png](https://z3.ax1x.com/2021/05/10/gN4Wss.png)](https://imgtu.com/i/gN4Wss)
-
-[![gN4Oy9.png](https://z3.ax1x.com/2021/05/10/gN4Oy9.png)](https://imgtu.com/i/gN4Oy9)
-
-[![gN4IoV.png](https://z3.ax1x.com/2021/05/10/gN4IoV.png)](https://imgtu.com/i/gN4IoV)
-
-[![gN4HWF.png](https://z3.ax1x.com/2021/05/10/gN4HWF.png)](https://imgtu.com/i/gN4HWF)
-
-[![gN45d0.png](https://z3.ax1x.com/2021/05/10/gN45d0.png)](https://imgtu.com/i/gN45d0)
-
-[![gN4LQJ.png](https://z3.ax1x.com/2021/05/10/gN4LQJ.png)](https://imgtu.com/i/gN4LQJ)
-
-[![gN4TiT.png](https://z3.ax1x.com/2021/05/10/gN4TiT.png)](https://imgtu.com/i/gN4TiT)
-
-[![gN4bz4.png](https://z3.ax1x.com/2021/05/10/gN4bz4.png)](https://imgtu.com/i/gN4bz4)
+[用户]
+test
+1234qwer
 
 #### 参与贡献
 
