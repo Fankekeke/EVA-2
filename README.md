@@ -57,10 +57,15 @@ xierdun
 test
 1234qwer
 
+#### 获取方式
+
+Email: fan1ke2ke@gmail.com
+
+WeChat: `Storm_Berserker`
+
 #### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
 
-1.  有需要完整项目请联系 QQ：1258846421
-2.  价格私聊，可充当毕设
+More info: [悲伤的橘子树](https://berserker287.github.io/)
 
 #### 参与贡献
 
